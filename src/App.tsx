@@ -6,9 +6,9 @@ import IncomeCard from "./components/IncomeCard";
 import ProgramCard from "./components/ProgramCard";
 import WhatsAppButton from "./components/WhatsAppButton";
 const categories = [
-  { name: "Kas An-Naibah", value: "Rp 3.317.740,00", color: "#ec4899" }, // pink
-  { name: "Kas Kencleng", value: "Rp 2.841.980,00", color: "#3b82f6" }, // blue
-  { name: "Lainnya", value: "Rp 2.267.920,00", color: "#6b7280" }, // gray
+  { name: "Kas An-Naibah", value: "Rp 573.000,00", color: "#ec4899" }, // pink
+  { name: "Kas Kencleng", value: "Rp 260.000,00", color: "#3b82f6" }, // blue
+  { name: "Lainnya", value: "Rp 495.000,00", color: "#6b7280" }, // gray
 ];
 const spendItems = [
   {
@@ -42,9 +42,9 @@ function App() {
           <section className="mx-2 pt-2">
             <IncomeCard
               title="Laporan DKM"
-              date="Jan 2025"
-              total="Rp 8.427.640,00 "
-              totalExpense="Rp 2.000.000"
+              date="September 2025"
+              total="Rp 1.090.000,00 "
+              totalExpense="Rp 850.000,00"
               categories={categories}
             />
           </section>
