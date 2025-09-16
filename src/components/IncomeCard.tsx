@@ -28,7 +28,7 @@ const IncomeCard: React.FC<IncomeCardProps> = ({
       <img
         src={banner}
         alt="Banner"
-        className="w-full h-40 object-cover rounded-xl mb-4"
+        className="w-full h-40 object-cover object-[75%_25%] rounded-xl mb-4"
       />
 
       {/* Header */}
