@@ -41,7 +41,7 @@ function App() {
         <div className="mx-auto w-full max-w-md flex-1 bg-gradient-to-b from-purple-200 via-purple-50 to-white shadow-md">
           <section className="mx-2 pt-2">
             <IncomeCard
-              title="Laporan DKM"
+              title="Laporan DKM AN-NAIBAH"
               date="September 2025"
               total="Rp 1.090.000,00 "
               totalExpense="Rp 850.000,00"
