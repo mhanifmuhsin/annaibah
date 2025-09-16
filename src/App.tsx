@@ -38,7 +38,7 @@ function App() {
     <>
       <div className="flex min-h-screen flex-col bg-gray-50">
         {/* konten utama */}
-        <div className="mx-auto w-full max-w-md flex-1 bg-gradient-to-b from-purple-200 via-purple-50 to-white shadow-md">
+        <div className="mx-auto w-full max-w-md flex-1 bg-gradient-to-b from-purple-200 via-purple-50 to-white shadow-md pb-20">
           <section className="mx-2 pt-2">
             <IncomeCard
               title="Laporan DKM AN-NAIBAH"
