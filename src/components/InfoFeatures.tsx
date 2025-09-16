@@ -26,19 +26,19 @@ const features = [
 
 const InfoFeatures: React.FC = () => {
   return (
-    <div className="max-w-4xl mx-auto py-10 px-4">
+    <div className="max-w-4xl mx-auto py-7 px-4">
       <h2 className="text-center text-sm font-bold text-gray-800 mb-8">
         Apa Saja yang Bisa Dilihat di Platform Pantau Aku ?
       </h2>
 
-      <div className="grid grid-cols-1  gap-6">
+      <div className="grid grid-cols-2  gap-6">
         {features.map((item, idx) => (
           <div
             key={idx}
-            className="flex items-center gap-4 bg-white p-5 rounded-xl shadow hover:shadow-lg transition"
+            className="flex flex-col items-center gap-4 bg-white p-5 rounded-xl shadow hover:shadow-lg transition"
           >
-            <div className="flex-shrink-0">{item.icon}</div>
-            <div>
+            <div>{item.icon}</div>
+            <div className="text-center">
               <h3 className="text-sm font-semibold text-gray-700">
                 {item.title}
               </h3>
