@@ -4,6 +4,7 @@ import { GlassWaterIcon } from "lucide-react";
 import BottomNavigation from "./components/bottom-navigation";
 import IncomeCard from "./components/IncomeCard";
 import ProgramCard from "./components/ProgramCard";
+import WhatsAppButton from "./components/WhatsAppButton";
 const categories = [
   { name: "Kas An-Naibah", value: "Rp 3.317.740,00", color: "#ec4899" }, // pink
   { name: "Kas Kencleng", value: "Rp 2.841.980,00", color: "#3b82f6" }, // blue
@@ -38,7 +39,7 @@ function App() {
       <div className="flex min-h-screen flex-col bg-gray-50">
         {/* konten utama */}
         <div className="mx-auto w-full max-w-md flex-1 bg-gradient-to-b from-purple-200 via-purple-50 to-white shadow-md">
-          <section className="mx-2 pt-5">
+          <section className="mx-2 pt-2">
             <IncomeCard
               title="Laporan DKM"
               date="Jan 2025"
@@ -52,6 +53,13 @@ function App() {
               title="Program Pembiasaan"
               period="2025"
               items={spendItems}
+            />
+          </section>
+          <section className="flex justify-center p-4">
+            <WhatsAppButton
+              phone="6281916511138"
+              message="Halo, saya ingin memberikan masukan."
+              title="Berikan Masukan"
             />
           </section>
         </div>

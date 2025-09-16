@@ -1,5 +1,5 @@
-// src/components/IncomeCard.tsx
 import React from "react";
+import banner from "../assets/ban.webp"; // Adjust the path if needed
 
 interface Category {
   name: string;
@@ -11,7 +11,7 @@ interface IncomeCardProps {
   title: string;
   date: string;
   total: string;
-  totalExpense?: string; // Add this prop
+  totalExpense?: string;
   categories: Category[];
 }
 
@@ -24,6 +24,13 @@ const IncomeCard: React.FC<IncomeCardProps> = ({
 }) => {
   return (
     <div className="rounded-2xl bg-white bg-opacity-30 backdrop-blur-md p-6 shadow-lg w-full max-w-md border border-white border-opacity-40">
+      {/* Banner Image */}
+      <img
+        src={banner}
+        alt="Banner"
+        className="w-full h-40 object-cover rounded-xl mb-4"
+      />
+
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-sm font-medium text-gray-600">{title}</h2>
