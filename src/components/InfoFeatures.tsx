@@ -31,7 +31,7 @@ const InfoFeatures: React.FC = () => {
         Apa Saja yang Bisa Dilihat di Platform Pantau Aku ?
       </h2>
 
-      <div className="grid grid-cols-2  gap-6">
+      <div className="grid grid-cols-1  gap-6">
         {features.map((item, idx) => (
           <div
             key={idx}

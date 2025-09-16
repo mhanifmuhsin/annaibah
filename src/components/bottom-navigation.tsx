@@ -8,11 +8,11 @@ import {
 
 const LANDING_NAV = [
   { href: "/annaibah", label: "Beranda", icon: HomeIcon },
-  { href: "/manaqib-annaibah", label: "Kas An-Naibah", icon: TowerControlIcon },
-  { href: "/kencleng-annaibah", label: "Kas Kencleng", icon: HandCoinsIcon },
+  { href: "/manaqib-annaibah", label: "An-Naibah", icon: TowerControlIcon },
+  { href: "/kencleng-annaibah", label: "Kencleng", icon: HandCoinsIcon },
   {
     href: "/wakaf-annaibah",
-    label: "Kas Lainnya",
+    label: "Lainnya",
     icon: PackageIcon,
   },
 ];
@@ -27,7 +27,7 @@ export default function BottomNavigation() {
 
   return (
     <nav className="fixed bottom-0 left-0 z-50 flex w-full justify-center">
-      <div className="w-full max-w-md bg-white shadow-md">
+      <div className="w-full max-w-md bg-white/30 backdrop-blur-md shadow-md rounded-t-xl">
         <div className="mx-auto flex w-full max-w-md justify-around border-t py-2">
           {LANDING_NAV.map(({ href, label, icon: Icon }) => (
             <button key={href} className={getClass(href)}>
