@@ -5,6 +5,8 @@ import BottomNavigation from "./components/bottom-navigation";
 import IncomeCard from "./components/IncomeCard";
 import ProgramCard from "./components/ProgramCard";
 import WhatsAppButton from "./components/WhatsAppButton";
+import React from "react";
+
 const categories = [
   { name: "Kas An-Naibah", value: "Rp 573.000,00", color: "#ec4899" }, // pink
   { name: "Kas Kencleng", value: "Rp 260.000,00", color: "#3b82f6" }, // blue
@@ -34,27 +36,95 @@ const spendItems = [
   },
 ];
 function App() {
+  const [stateNavigation, setStateNavigation] = React.useState("home");
   return (
     <>
       <div className="flex min-h-screen flex-col bg-gray-50">
         {/* konten utama */}
         <div className="mx-auto w-full max-w-md flex-1 bg-gradient-to-b from-purple-200 via-purple-50 to-white shadow-md pb-20">
-          <section className="mx-2 pt-2">
-            <IncomeCard
-              title="Laporan DKM AN-NAIBAH"
-              date="September 2025"
-              total="Rp 1.090.000,00 "
-              totalExpense="Rp 850.000,00"
-              categories={categories}
-            />
-          </section>
-          <section className="m-2">
-            <ProgramCard
-              title="Program Pembiasaan"
-              period="2025"
-              items={spendItems}
-            />
-          </section>
+          {stateNavigation === "home" && (
+            <>
+              <section className="mx-2 pt-2">
+                <IncomeCard
+                  title="Laporan DKM AN-NAIBAH"
+                  date="September 2025"
+                  total="Rp 1.090.000,00 "
+                  totalExpense="Rp 850.000,00"
+                  categories={categories}
+                />
+              </section>
+              <section className="m-2">
+                <ProgramCard
+                  title="Program Pembiasaan"
+                  period="2025"
+                  items={spendItems}
+                />
+              </section>
+            </>
+          )}
+          {stateNavigation === "kas_annaibah" && (
+            <>
+              <section className="mx-2 pt-2">
+                <IncomeCard
+                  title="Laporan Kas An-Naibah"
+                  date="September 2025"
+                  total="Rp 1.090.000,00 "
+                  totalExpense="Rp 850.000,00"
+                  categories={categories}
+                />
+              </section>
+              <section className="m-2">
+                <ProgramCard
+                  title="Program Pembiasaan"
+                  period="2025"
+                  items={spendItems}
+                />
+              </section>
+            </>
+          )}
+
+          {stateNavigation === "kencleng_annaibah" && (
+            <>
+              <section className="mx-2 pt-2">
+                <IncomeCard
+                  title="Laporan Kas Kencleng"
+                  date="September 2025"
+                  total="Rp 1.090.000,00 "
+                  totalExpense="Rp 850.000,00"
+                  categories={categories}
+                />
+              </section>
+              <section className="m-2">
+                <ProgramCard
+                  title="Program Pembiasaan"
+                  period="2025"
+                  items={spendItems}
+                />
+              </section>
+            </>
+          )}
+
+          {stateNavigation === "wakaf_annaibah" && (
+            <>
+              <section className="mx-2 pt-2">
+                <IncomeCard
+                  title="Laporan Kas Lainnya"
+                  date="September 2025"
+                  total="Rp 1.090.000,00 "
+                  totalExpense="Rp 850.000,00"
+                  categories={categories}
+                />
+              </section>
+              <section className="m-2">
+                <ProgramCard
+                  title="Program Pembiasaan"
+                  period="2025"
+                  items={spendItems}
+                />
+              </section>
+            </>
+          )}
+
           <section className="flex justify-center p-4">
             <WhatsAppButton
               phone="6281916511138"
@@ -65,7 +135,10 @@ function App() {
         </div>
 
         {/* bottom navigation selalu di bawah */}
-        <BottomNavigation />
+        <BottomNavigation
+          state={stateNavigation}
+          setState={setStateNavigation}
+        />
       </div>
     </>
   );
