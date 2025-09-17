@@ -288,7 +288,7 @@ function App() {
                     month: "long",
                     year: "numeric",
                   })}
-                  total="Rp 240.000,00 "
+                  total="Rp 573.000,00 "
                   totalExpense="Rp 0,00"
                   categories={categories.filter(
                     (cat) => cat.id === "kas_annaibah"
