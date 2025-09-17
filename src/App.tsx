@@ -265,8 +265,8 @@ function App() {
                     month: "long",
                     year: "numeric",
                   })}
-                  total="Rp 1.090.000,00 "
-                  totalExpense="Rp 1.230.000,00"
+                  total="Rp 1.350.000,00"
+                  totalExpense="Rp 1.280.000,00"
                   categories={categories}
                 />
               </section>
