@@ -347,7 +347,7 @@ function App() {
                     year: "numeric",
                   })}
                   total="Rp 850.000,00 "
-                  totalExpense="Rp 850.000,00"
+                  totalExpense="Rp 1.230.000,00"
                   categories={categories.filter(
                     (cat) => cat.id === "wakaf_annaibah"
                   )}
