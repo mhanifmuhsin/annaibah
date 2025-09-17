@@ -54,7 +54,7 @@ const spendItems = [
 
 const inOutKasAnnaibah = [
   {
-    date: "2 September 2025",
+    date: "31 Agustus 2025",
     in: 330000,
     out: 0,
     desc: "Saldo",
@@ -288,7 +288,7 @@ function App() {
                     month: "long",
                     year: "numeric",
                   })}
-                  total="Rp 573.000,00 "
+                  total="Rp 240.000,00 "
                   totalExpense="Rp 0,00"
                   categories={categories.filter(
                     (cat) => cat.id === "kas_annaibah"
