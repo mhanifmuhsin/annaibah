@@ -21,7 +21,7 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
   return (
     <button
       onClick={handleClick}
-      className="flex item-center text-sm rounded-lg bg-green-600 px-4 py-2 text-white font-medium shadow hover:bg-green-700 transition"
+      className="flex item-center text-sm rounded-lg bg-red-600 px-4 py-2 text-white font-medium shadow hover:bg-red-700 transition"
     >
       <img
         src={waLogo}

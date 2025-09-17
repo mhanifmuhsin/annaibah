@@ -33,14 +33,14 @@ const IncomeCard: React.FC<IncomeCardProps> = ({
 
       {/* Header */}
       <div className="flex flex-col [@media(min-width:400px)]:flex-row items-center justify-between mb-4">
-        <h2 className="text-xs font-medium text-red-600">{title}</h2>
-        <span className="text-xs text-gray-500">{date}</span>
+        <h2 className="text-xs font-bold text-red-600">{title}</h2>
+        <span className="text-xs text-gray-600">{date}</span>
       </div>
 
       {/* Total Income & Expense */}
       <div className="flex items-center justify-between">
         <div>
-          <p className="text-sm [@media(min-width:400px)]:text-md text-gray-500">
+          <p className="text-sm [@media(min-width:400px)]:text-md text-gray-600">
             Total Pendapatan
           </p>
           <h1 className="text-sm [@media(min-width:400px)]:text-xl font-semibold text-green-800">
@@ -49,7 +49,7 @@ const IncomeCard: React.FC<IncomeCardProps> = ({
         </div>
         {totalExpense && (
           <div className="text-right">
-            <p className="text-sm [@media(min-width:400px)]:text-md text-gray-500">
+            <p className="text-sm [@media(min-width:400px)]:text-md text-gray-600">
               Total Pengeluaran
             </p>
             <h1 className="text-sm [@media(min-width:400px)]:text-xl font-semibold text-red-600">
@@ -67,7 +67,7 @@ const IncomeCard: React.FC<IncomeCardProps> = ({
             className="border-l-4 pl-2 flex justify-between [@media(min-width:400px)]:flex-col"
             style={{ borderColor: cat.color }}
           >
-            <p className="text-xs text-gray-500">{cat.name}</p>
+            <p className="text-xs text-gray-600">{cat.name}</p>
             <p className={`text-xs font-semibold`}>{cat.value}</p>
           </div>
         ))}
