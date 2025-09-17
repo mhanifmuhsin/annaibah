@@ -33,7 +33,7 @@ const IncomeCard: React.FC<IncomeCardProps> = ({
 
       {/* Header */}
       <div className="flex flex-col [@media(min-width:400px)]:flex-row items-center justify-between mb-4">
-        <h2 className="text-sm font-medium text-gray-600">{title}</h2>
+        <h2 className="text-xs font-medium text-red-600">{title}</h2>
         <span className="text-xs text-gray-500">{date}</span>
       </div>
 

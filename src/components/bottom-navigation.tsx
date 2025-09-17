@@ -26,7 +26,7 @@ export default function BottomNavigation({
 }) {
   const getClass = (value: string) =>
     `flex flex-col items-center rounded-md px-2 py-1 text-xs transition-all ${
-      state === value ? "bg-purple-600 text-white" : "text-gray-500"
+      state === value ? "bg-red-600 text-white" : "text-gray-500"
     }`;
 
   return (
