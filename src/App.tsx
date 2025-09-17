@@ -159,7 +159,7 @@ const inOutWakafAnnaibah = [
   },
   {
     date: "9 September 2025",
-    in: 35000,
+    in: 350000,
     out: 0,
     desc: "Wakaf produktif caringin",
     saldo: 1145000,
