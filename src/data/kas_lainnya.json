@@ -1,0 +1,141 @@
+[
+  {
+    "date": "2025-08-08",
+    "in": 200000,
+    "out": 0,
+    "desc": "Saldo"
+  },
+  {
+    "date": "2025-08-28",
+    "in": 295000,
+    "out": 0,
+    "desc": "Saldo sisa bendahara (teh euis)"
+  },
+  {
+    "date": "2025-09-03",
+    "in": 100000,
+    "out": 0,
+    "desc": "Bapak Asep Salaman P"
+  },
+  {
+    "date": "2025-09-07",
+    "in": 250000,
+    "out": 0,
+    "desc": "Hj. Imas Hasanah"
+  },
+  {
+    "date": "2025-09-07",
+    "in": 50000,
+    "out": 0,
+    "desc": "Hj. Noneng S dari H. Sutari"
+  },
+  {
+    "date": "2025-09-07",
+    "in": 50000,
+    "out": 0,
+    "desc": "Kas Kencleng Mesjid"
+  },
+  {
+    "date": "2025-09-07",
+    "in": 50000,
+    "out": 0,
+    "desc": "Muhamad Hanif Muhsin"
+  },
+  {
+    "date": "2025-09-07",
+    "in": 0,
+    "out": 36000,
+    "desc": "BPJS Bapak Agus Sopandi"
+  },
+  {
+    "date": "2025-09-07",
+    "in": 0,
+    "out": 164000,
+    "desc": "Bapak Agus Sopandi (sebagai imam mesjid)"
+  },
+  {
+    "date": "2025-09-09",
+    "in": 350000,
+    "out": 0,
+    "desc": "Wakaf produktif caringin"
+  },
+  {
+    "date": "2025-09-09",
+    "in": 0,
+    "out": 20000,
+    "desc": "Teh Euis (membantu bendahara wakaf)"
+  },
+  {
+    "date": "2025-09-09",
+    "in": 0,
+    "out": 25000,
+    "desc": "Manaqib Ibu Rella At-Taqwa",
+    "saldo": 1125000
+  },
+  {
+    "date": "2025-09-09",
+    "in": 0,
+    "out": 25000,
+    "desc": "Bi Nyai (membantu acara manaqib)"
+  },
+  {
+    "date": "2025-09-09",
+    "in": 0,
+    "out": 100000,
+    "desc": "Konsumsi manaqib ibu rella dan iuran pusat"
+  },
+  {
+    "date": "2025-09-12",
+    "in": 0,
+    "out": 150000,
+    "desc": "Sodaqoh manaqib ust.arif"
+  },
+  {
+    "date": "2025-09-14",
+    "in": 0,
+    "out": 105000,
+    "desc": "Air Sirraya 3 Dus Gelas Manaqib Ibu Rella + At-Taqwa"
+  },
+  {
+    "date": "2025-09-14",
+    "in": 0,
+    "out": 250000,
+    "desc": "Air Sirraya 3 Dus Botol Manaqib An-Naibah"
+  },
+  {
+    "date": "2025-09-17",
+    "in": 0,
+    "out": 225000,
+    "desc": "Personil Manaqib At-Taqwa"
+  },
+  {
+    "date": "2025-09-17",
+    "in": 0,
+    "out": 20000,
+    "desc": "Khotaman Manaqib At-Taqwa"
+  },
+  {
+    "date": "2025-09-17",
+    "in": 0,
+    "out": 30000,
+    "desc": "Bi Nyai Manaqib At-Taqwa"
+  },
+  {
+    "date": "2025-09-17",
+    "in": 0,
+    "out": 20000,
+    "desc": "Ade Dayeuhkolot Manaqib At-Taqwa"
+  },
+  {
+    "date": "2025-09-17",
+    "in": 0,
+    "out": 60000,
+    "desc": "Biaya tidak terduga Manaqib At-Taqwa"
+  },
+  {
+    "date": "2025-09-18",
+    "in": 100000,
+    "out": 0,
+    "desc": "Hj. Noneng S dari H. Sutari"
+  }
+]

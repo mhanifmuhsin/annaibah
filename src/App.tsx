@@ -7,27 +7,11 @@ import ProgramCard from "./components/ProgramCard";
 import WhatsAppButton from "./components/WhatsAppButton";
 import React from "react";
 import InOut from "./components/InOut";
+import kasAnnaibahData from "./data/kas_annaibah.json";
+import kasKenclengData from "./data/kas_kencleng.json";
+import kasLainnyaData from "./data/kas_lainnya.json";
+import { hitungSaldo } from "./utils";
 
-const categories = [
-  {
-    id: "kas_annaibah",
-    name: "Kas An-Naibah",
-    value: "Rp 573.000,00",
-    color: "#ec4899",
-  }, // pink
-  {
-    id: "kencleng_annaibah",
-    name: "Kas Kencleng",
-    value: "Rp 260.000,00",
-    color: "#3b82f6",
-  }, // blue
-  {
-    id: "wakaf_annaibah",
-    name: "Lainnya",
-    value: "Rp 215.000,00",
-    color: "#6b7280",
-  }, // gray
-];
 const spendItems = [
   {
     icon: <GlassWaterIcon className="h-4 w-4 text-gray-600" />,
@@ -52,212 +36,56 @@ const spendItems = [
   },
 ];
 
-const inOutKasAnnaibah = [
-  {
-    date: "31 Agustus 2025",
-    in: 330000,
-    out: 0,
-    desc: "Saldo",
-    saldo: 330000,
-  },
-  {
-    date: "2 September 2025",
-    in: 240000,
-    out: 0,
-    desc: "Muhamad Hanif Muhsin",
-    saldo: 573000,
-  },
-];
-
-const inOutKenclengAnnaibah = [
-  {
-    date: "7 September 2025",
-    in: 50000,
-    out: 0,
-    desc: "Saldo",
-    saldo: 50000,
-  },
-  {
-    date: "7 September 2025",
-    in: 0,
-    out: 50000,
-    desc: "Marbot",
-    saldo: 0,
-  },
-  {
-    date: "15 September 2025",
-    in: 260000,
-    out: 0,
-    desc: "Dari kencleng",
-    saldo: 260000,
-  },
-];
-
-const inOutWakafAnnaibah = [
-  {
-    date: "8 Agustus 2025",
-    in: 200000,
-    out: 0,
-    desc: "Saldo",
-    saldo: 200000,
-  },
-  {
-    date: "28 Agustus 2025",
-    in: 295000,
-    out: 0,
-    desc: "Saldo sisa bendahara (teh euis)",
-    saldo: 495000,
-  },
-  {
-    date: "3 September 2025",
-    in: 100000,
-    out: 0,
-    desc: "Bapak Asep Salaman P",
-    saldo: 595000,
-  },
-  {
-    date: "7 September 2025",
-    in: 250000,
-    out: 0,
-    desc: "Hj. Imas Hasanah",
-    saldo: 845000,
-  },
-  {
-    date: "7 September 2025",
-    in: 50000,
-    out: 0,
-    desc: "Hj. Noneng S dari H. Sutari",
-    saldo: 895000,
-  },
-  {
-    date: "7 September 2025",
-    in: 50000,
-    out: 0,
-    desc: "Kas Kencleng Mesjid",
-    saldo: 945000,
-  },
-  {
-    date: "7 September 2025",
-    in: 50000,
-    out: 0,
-    desc: "Muhamad Hanif Muhsin",
-    saldo: 995000,
-  },
-  {
-    date: "7 September 2025",
-    in: 0,
-    out: 36000,
-    desc: "BPJS Bapak Agus Sopandi",
-    saldo: 959000,
-  },
-  {
-    date: "7 September 2025",
-    in: 0,
-    out: 164000,
-    desc: "Bapak Agus Sopandi (sebagai imam mesjid)",
-    saldo: 795000,
-  },
-  {
-    date: "9 September 2025",
-    in: 350000,
-    out: 0,
-    desc: "Wakaf produktif caringin",
-    saldo: 1145000,
-  },
-  {
-    date: "9 September 2025",
-    in: 0,
-    out: 20000,
-    desc: "Teh Euis (membantu bendahara wakaf)",
-    saldo: 1145000,
-  },
-  {
-    date: "9 September 2025",
-    in: 0,
-    out: 20000,
-    desc: "Manaqib Ibu Rella At-Taqwa",
-    saldo: 1125000,
-  },
-  {
-    date: "9 September 2025",
-    in: 0,
-    out: 25000,
-    desc: "Bi Nyai (membantu acara manaqib)",
-    saldo: 1100000,
-  },
-  {
-    date: "9 September 2025",
-    in: 0,
-    out: 100000,
-    desc: "Konsumsi manaqib ibu rella dan iuran pusat",
-    saldo: 975000,
-  },
-  {
-    date: "12 September 2025",
-    in: 0,
-    out: 150000,
-    desc: "Sodaqoh manaqib ust.arif",
-    saldo: 825000,
-  },
-  {
-    date: "14 September 2025",
-    in: 0,
-    out: 150000,
-    desc: "Air Sirraya 3 Dus Gelas Manaqib Ibu Rella + At-Taqwa",
-    saldo: 720000,
-  },
-  {
-    date: "14 September 2025",
-    in: 0,
-    out: 250000,
-    desc: "Air Sirraya 3 Dus Botol Manaqib An-Naibah",
-    saldo: 495000,
-  },
-  {
-    date: "17 September 2025",
-    in: 0,
-    out: 225000,
-    desc: "Personil Manaqib At-Taqwa",
-    saldo: 245000,
-  },
-  {
-    date: "17 September 2025",
-    in: 0,
-    out: 20000,
-    desc: "Khotaman Manaqib At-Taqwa",
-    saldo: 225000,
-  },
-  {
-    date: "17 September 2025",
-    in: 0,
-    out: 30000,
-    desc: "Bi Nyai Manaqib At-Taqwa",
-    saldo: 195000,
-  },
-  {
-    date: "17 September 2025",
-    in: 0,
-    out: 20000,
-    desc: "Ade Dayeuhkolot Manaqib At-Taqwa",
-    saldo: 175000,
-  },
-  {
-    date: "17 September 2025",
-    in: 0,
-    out: 60000,
-    desc: "Biaya tidak terduga Manaqib At-Taqwa",
-    saldo: 115000,
-  },
-  {
-    date: "18 September 2025",
-    in: 100000,
-    out: 0,
-    desc: "Hj. Noneng S dari H. Sutari",
-    saldo: 215000,
-  },
-];
 function App() {
   const [stateNavigation, setStateNavigation] = React.useState("home");
+  const dataKasAnnaibah = hitungSaldo(kasAnnaibahData);
+  const dataKasKencleng = hitungSaldo(kasKenclengData);
+  const dataKasLainnya = hitungSaldo(kasLainnyaData);
+  const categories = [
+    {
+      id: "kas_annaibah",
+      name: "Kas An-Naibah",
+      value: dataKasAnnaibah.length
+        ? dataKasAnnaibah[dataKasAnnaibah.length - 1].saldo.toLocaleString(
+            "id-ID",
+            {
+              style: "currency",
+              currency: "IDR",
+            }
+          )
+        : "Rp 0,00",
+      color: "#ec4899",
+    }, // pink
+    {
+      id: "kencleng_annaibah",
+      name: "Kas Kencleng",
+      value: dataKasKencleng.length
+        ? dataKasKencleng[dataKasKencleng.length - 1].saldo.toLocaleString(
+            "id-ID",
+            {
+              style: "currency",
+              currency: "IDR",
+            }
+          )
+        : "Rp 0,00",
+      color: "#3b82f6",
+    }, // blue
+    {
+      id: "wakaf_annaibah",
+      name: "Lainnya",
+      value: dataKasLainnya.length
+        ? dataKasLainnya[dataKasLainnya.length - 1].saldo.toLocaleString(
+            "id-ID",
+            {
+              style: "currency",
+              currency: "IDR",
+            }
+          )
+        : "Rp 0,00",
+      color: "#6b7280",
+    }, // gray
+  ];
+
   return (
     <>
       <div className="flex min-h-screen flex-col bg-gray-50">
@@ -272,8 +100,70 @@ function App() {
                     month: "long",
                     year: "numeric",
                   })}
-                  total="Rp 1.450.000,00"
-                  totalExpense="Rp 1.280.000,00"
+                  total={(
+                    dataKasAnnaibah
+                      .filter(
+                        (item) =>
+                          new Date(item.date).getMonth() ===
+                            new Date().getMonth() &&
+                          new Date(item.date).getFullYear() ===
+                            new Date().getFullYear()
+                      )
+                      .reduce((acc, item) => acc + item.in, 0) +
+                    dataKasKencleng
+                      .filter(
+                        (item) =>
+                          new Date(item.date).getMonth() ===
+                            new Date().getMonth() &&
+                          new Date(item.date).getFullYear() ===
+                            new Date().getFullYear()
+                      )
+                      .reduce((acc, item) => acc + item.in, 0) +
+                    dataKasLainnya
+                      .filter(
+                        (item) =>
+                          new Date(item.date).getMonth() ===
+                            new Date().getMonth() &&
+                          new Date(item.date).getFullYear() ===
+                            new Date().getFullYear()
+                      )
+                      .reduce((acc, item) => acc + item.in, 0)
+                  ).toLocaleString("id-ID", {
+                    style: "currency",
+                    currency: "IDR",
+                  })}
+                  totalExpense={(
+                    dataKasAnnaibah
+                      .filter(
+                        (item) =>
+                          new Date(item.date).getMonth() ===
+                            new Date().getMonth() &&
+                          new Date(item.date).getFullYear() ===
+                            new Date().getFullYear()
+                      )
+                      .reduce((acc, item) => acc + item.out, 0) +
+                    dataKasKencleng
+                      .filter(
+                        (item) =>
+                          new Date(item.date).getMonth() ===
+                            new Date().getMonth() &&
+                          new Date(item.date).getFullYear() ===
+                            new Date().getFullYear()
+                      )
+                      .reduce((acc, item) => acc + item.out, 0) +
+                    dataKasLainnya
+                      .filter(
+                        (item) =>
+                          new Date(item.date).getMonth() ===
+                            new Date().getMonth() &&
+                          new Date(item.date).getFullYear() ===
+                            new Date().getFullYear()
+                      )
+                      .reduce((acc, item) => acc + item.out, 0)
+                  ).toLocaleString("id-ID", {
+                    style: "currency",
+                    currency: "IDR",
+                  })}
                   categories={categories}
                 />
               </section>
@@ -295,8 +185,32 @@ function App() {
                     month: "long",
                     year: "numeric",
                   })}
-                  total="Rp 240.000,00 "
-                  totalExpense="Rp 0,00"
+                  total={dataKasAnnaibah
+                    .filter(
+                      (item) =>
+                        new Date(item.date).getMonth() ===
+                          new Date().getMonth() &&
+                        new Date(item.date).getFullYear() ===
+                          new Date().getFullYear()
+                    )
+                    .reduce((acc, item) => acc + item.in, 0)
+                    .toLocaleString("id-ID", {
+                      style: "currency",
+                      currency: "IDR",
+                    })}
+                  totalExpense={dataKasAnnaibah
+                    .filter(
+                      (item) =>
+                        new Date(item.date).getMonth() ===
+                          new Date().getMonth() &&
+                        new Date(item.date).getFullYear() ===
+                          new Date().getFullYear()
+                    )
+                    .reduce((acc, item) => acc + item.out, 0)
+                    .toLocaleString("id-ID", {
+                      style: "currency",
+                      currency: "IDR",
+                    })}
                   categories={categories.filter(
                     (cat) => cat.id === "kas_annaibah"
                   )}
@@ -308,7 +222,7 @@ function App() {
                   period={new Date().toLocaleString("id-ID", {
                     year: "numeric",
                   })}
-                  items={inOutKasAnnaibah}
+                  items={dataKasAnnaibah}
                 />
               </section>
             </>
@@ -323,8 +237,32 @@ function App() {
                     month: "long",
                     year: "numeric",
                   })}
-                  total="Rp 260.000,00 "
-                  totalExpense="Rp 50.000,00"
+                  total={dataKasKencleng
+                    .filter(
+                      (item) =>
+                        new Date(item.date).getMonth() ===
+                          new Date().getMonth() &&
+                        new Date(item.date).getFullYear() ===
+                          new Date().getFullYear()
+                    )
+                    .reduce((acc, item) => acc + item.in, 0)
+                    .toLocaleString("id-ID", {
+                      style: "currency",
+                      currency: "IDR",
+                    })}
+                  totalExpense={dataKasKencleng
+                    .filter(
+                      (item) =>
+                        new Date(item.date).getMonth() ===
+                          new Date().getMonth() &&
+                        new Date(item.date).getFullYear() ===
+                          new Date().getFullYear()
+                    )
+                    .reduce((acc, item) => acc + item.out, 0)
+                    .toLocaleString("id-ID", {
+                      style: "currency",
+                      currency: "IDR",
+                    })}
                   categories={categories.filter(
                     (cat) => cat.id === "kencleng_annaibah"
                   )}
@@ -336,7 +274,7 @@ function App() {
                   period={new Date().toLocaleString("id-ID", {
                     year: "numeric",
                   })}
-                  items={inOutKenclengAnnaibah}
+                  items={dataKasKencleng}
                 />
               </section>
             </>
@@ -351,8 +289,32 @@ function App() {
                     month: "long",
                     year: "numeric",
                   })}
-                  total="Rp 950.000,00 "
-                  totalExpense="Rp 1.230.000,00"
+                  total={dataKasLainnya
+                    .filter(
+                      (item) =>
+                        new Date(item.date).getMonth() ===
+                          new Date().getMonth() &&
+                        new Date(item.date).getFullYear() ===
+                          new Date().getFullYear()
+                    )
+                    .reduce((acc, item) => acc + item.in, 0)
+                    .toLocaleString("id-ID", {
+                      style: "currency",
+                      currency: "IDR",
+                    })}
+                  totalExpense={dataKasLainnya
+                    .filter(
+                      (item) =>
+                        new Date(item.date).getMonth() ===
+                          new Date().getMonth() &&
+                        new Date(item.date).getFullYear() ===
+                          new Date().getFullYear()
+                    )
+                    .reduce((acc, item) => acc + item.out, 0)
+                    .toLocaleString("id-ID", {
+                      style: "currency",
+                      currency: "IDR",
+                    })}
                   categories={categories.filter(
                     (cat) => cat.id === "wakaf_annaibah"
                   )}
@@ -364,7 +326,7 @@ function App() {
                   period={new Date().toLocaleString("id-ID", {
                     year: "numeric",
                   })}
-                  items={inOutWakafAnnaibah}
+                  items={dataKasLainnya}
                 />
               </section>
             </>

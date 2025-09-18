@@ -29,7 +29,13 @@ const InOut: React.FC<InOutProps> = ({ title, period, items }) => {
       <div className="space-y-4">
         {items.map((item, idx) => (
           <div key={idx}>
-            <p className="text-xs font-semibold text-blue-800">{item.date}</p>
+            <p className="text-xs text-gray-900 font-semibold">
+              {new Date(item.date).toLocaleDateString("id-ID", {
+                day: "2-digit",
+                month: "long",
+                year: "numeric",
+              })}
+            </p>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100">
