@@ -306,7 +306,6 @@ function App() {
                 <InOut
                   title="Pemasukan Pengeluaran"
                   period={new Date().toLocaleString("id-ID", {
-                    month: "long",
                     year: "numeric",
                   })}
                   items={inOutKasAnnaibah}
@@ -335,7 +334,6 @@ function App() {
                 <InOut
                   title="Pemasukan Pengeluaran"
                   period={new Date().toLocaleString("id-ID", {
-                    month: "long",
                     year: "numeric",
                   })}
                   items={inOutKenclengAnnaibah}
@@ -364,7 +362,6 @@ function App() {
                 <InOut
                   title="Pemasukan Pengeluaran"
                   period={new Date().toLocaleString("id-ID", {
-                    month: "long",
                     year: "numeric",
                   })}
                   items={inOutWakafAnnaibah}
