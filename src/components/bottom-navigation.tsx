@@ -31,7 +31,7 @@ export default function BottomNavigation({
 
   return (
     <nav className="fixed bottom-0 left-0 z-50 flex w-full justify-center">
-      <div className="w-full max-w-md bg-white/30 backdrop-blur-md shadow-md rounded-t-xl">
+      <div className="w-full max-w-md bg-white/30 backdrop-blur-md shadow-md ">
         <div className="mx-auto flex w-full max-w-md justify-around border-t py-2">
           {LANDING_NAV.map(({ value, label, icon: Icon }) => (
             <button

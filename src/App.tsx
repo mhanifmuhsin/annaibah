@@ -41,47 +41,65 @@ function App() {
   const dataKasAnnaibah = hitungSaldo(kasAnnaibahData);
   const dataKasKencleng = hitungSaldo(kasKenclengData);
   const dataKasLainnya = hitungSaldo(kasLainnyaData);
+  const [selectedMonth, setSelectedMonth] = React.useState(
+    new Date().getMonth()
+  );
+  const [selectedYear, setSelectedYear] = React.useState(
+    new Date().getFullYear()
+  );
   const categories = [
     {
       id: "kas_annaibah",
       name: "Kas An-Naibah",
-      value: dataKasAnnaibah.length
-        ? dataKasAnnaibah[dataKasAnnaibah.length - 1].saldo.toLocaleString(
-            "id-ID",
-            {
+      value: (() => {
+        const filtered = dataKasAnnaibah.filter(
+          (item) =>
+            new Date(item.date).getMonth() === selectedMonth &&
+            new Date(item.date).getFullYear() === selectedYear
+        );
+        return filtered.length
+          ? filtered[filtered.length - 1].saldo.toLocaleString("id-ID", {
               style: "currency",
               currency: "IDR",
-            }
-          )
-        : "Rp 0,00",
+            })
+          : "Rp 0,00";
+      })(),
       color: "#ec4899",
     }, // pink
     {
       id: "kencleng_annaibah",
       name: "Kas Kencleng",
-      value: dataKasKencleng.length
-        ? dataKasKencleng[dataKasKencleng.length - 1].saldo.toLocaleString(
-            "id-ID",
-            {
+      value: (() => {
+        const filtered = dataKasKencleng.filter(
+          (item) =>
+            new Date(item.date).getMonth() === selectedMonth &&
+            new Date(item.date).getFullYear() === selectedYear
+        );
+        return filtered.length
+          ? filtered[filtered.length - 1].saldo.toLocaleString("id-ID", {
               style: "currency",
               currency: "IDR",
-            }
-          )
-        : "Rp 0,00",
+            })
+          : "Rp 0,00";
+      })(),
       color: "#3b82f6",
     }, // blue
     {
       id: "wakaf_annaibah",
       name: "Lainnya",
-      value: dataKasLainnya.length
-        ? dataKasLainnya[dataKasLainnya.length - 1].saldo.toLocaleString(
-            "id-ID",
-            {
+      value: (() => {
+        const filtered = dataKasLainnya.filter(
+          (item) =>
+            new Date(item.date).getMonth() === selectedMonth &&
+            new Date(item.date).getFullYear() === selectedYear
+        );
+        return filtered.length
+          ? filtered[filtered.length - 1].saldo.toLocaleString("id-ID", {
               style: "currency",
               currency: "IDR",
-            }
-          )
-        : "Rp 0,00",
+            })
+          : "Rp 0,00";
+      })(),
       color: "#6b7280",
     }, // gray
   ];
@@ -91,254 +109,303 @@ function App() {
       <div className="flex min-h-screen flex-col bg-gray-50">
         {/* konten utama */}
         <div className="mx-auto w-full max-w-md flex-1 bg-gradient-to-b from-red-400 via-red-50 to-white shadow-md pb-20">
-          {stateNavigation === "home" && (
-            <>
-              <section className="mx-2 pt-2">
-                <IncomeCard
-                  title="Roudloh Merah Putih AN-NAIBAH"
-                  date={new Date().toLocaleString("id-ID", {
-                    month: "long",
-                    year: "numeric",
-                  })}
-                  total={(
-                    dataKasAnnaibah
+          {/* Filter by month and year */}
+          <div
+            className="fixed top-0 left-1/2 -translate-x-1/2 z-20 w-full max-w-md text-xs flex gap-3 justify-center items-center mx-auto px-4 py-1 bg-white shadow-md border-b border-pink-200"
+            style={{ backdropFilter: "blur(8px)" }}
+          >
+            <label
+              htmlFor="month"
+              className="text-xs text-gray-600 font-medium"
+            >
+              Bulan
+            </label>
+            <select
+              id="month"
+              className="border border-gray-300 rounded-md px-3 py-1 focus:outline-none focus:ring-2 focus:ring-pink-400 bg-gray-50 text-gray-700 backdrop-blur-md bg-opacity-70"
+              value={selectedMonth}
+              onChange={(e) => setSelectedMonth(Number(e.target.value))}
+            >
+              {Array.from({
+                length:
+                  selectedYear === new Date().getFullYear()
+                    ? new Date().getMonth() + 1
+                    : 12,
+              }).map((_, i) => (
+                <option key={i} value={i}>
+                  {new Date(0, i).toLocaleString("id-ID", { month: "long" })}
+                </option>
+              ))}
+            </select>
+            <label htmlFor="year" className="text-xs text-gray-600 font-medium">
+              Tahun
+            </label>
+            <select
+              id="year"
+              className="border border-gray-300 rounded-md px-3 py-1 focus:outline-none focus:ring-2 focus:ring-pink-400 bg-gray-50 text-gray-700 backdrop-blur-md bg-opacity-70"
+              value={selectedYear}
+              onChange={(e) => setSelectedYear(Number(e.target.value))}
+            >
+              {Array.from({ length: 5 }).map((_, i) => {
+                const year = new Date().getFullYear() - i;
+                return (
+                  <option key={year} value={year}>
+                    {year}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+          <div className="pt-10">
+            {stateNavigation === "home" && (
+              <>
+                <section className="mx-2 pt-2">
+                  <IncomeCard
+                    title="Roudloh Merah Putih AN-NAIBAH"
+                    date={new Date(selectedYear, selectedMonth).toLocaleString(
+                      "id-ID",
+                      {
+                        month: "long",
+                        year: "numeric",
+                      }
+                    )}
+                    total={(
+                      dataKasAnnaibah
+                        .filter(
+                          (item) =>
+                            new Date(item.date).getMonth() === selectedMonth &&
+                            new Date(item.date).getFullYear() === selectedYear
+                        )
+                        .reduce((acc, item) => acc + item.in, 0) +
+                      dataKasKencleng
+                        .filter(
+                          (item) =>
+                            new Date(item.date).getMonth() === selectedMonth &&
+                            new Date(item.date).getFullYear() === selectedYear
+                        )
+                        .reduce((acc, item) => acc + item.in, 0) +
+                      dataKasLainnya
+                        .filter(
+                          (item) =>
+                            new Date(item.date).getMonth() === selectedMonth &&
+                            new Date(item.date).getFullYear() === selectedYear
+                        )
+                        .reduce((acc, item) => acc + item.in, 0)
+                    ).toLocaleString("id-ID", {
+                      style: "currency",
+                      currency: "IDR",
+                    })}
+                    totalExpense={(
+                      dataKasAnnaibah
+                        .filter(
+                          (item) =>
+                            new Date(item.date).getMonth() === selectedMonth &&
+                            new Date(item.date).getFullYear() === selectedYear
+                        )
+                        .reduce((acc, item) => acc + item.out, 0) +
+                      dataKasKencleng
+                        .filter(
+                          (item) =>
+                            new Date(item.date).getMonth() === selectedMonth &&
+                            new Date(item.date).getFullYear() === selectedYear
+                        )
+                        .reduce((acc, item) => acc + item.out, 0) +
+                      dataKasLainnya
+                        .filter(
+                          (item) =>
+                            new Date(item.date).getMonth() === selectedMonth &&
+                            new Date(item.date).getFullYear() === selectedYear
+                        )
+                        .reduce((acc, item) => acc + item.out, 0)
+                    ).toLocaleString("id-ID", {
+                      style: "currency",
+                      currency: "IDR",
+                    })}
+                    categories={categories}
+                  />
+                </section>
+                <section className="m-2">
+                  <ProgramCard
+                    title="Program Pembiasaan"
+                    period="2025"
+                    items={spendItems}
+                  />
+                </section>
+              </>
+            )}
+            {stateNavigation === "kas_annaibah" && (
+              <>
+                <section className="mx-2 pt-2">
+                  <IncomeCard
+                    title="Laporan Kas An-Naibah"
+                    date={new Date(selectedYear, selectedMonth).toLocaleString(
+                      "id-ID",
+                      {
+                        month: "long",
+                        year: "numeric",
+                      }
+                    )}
+                    total={dataKasAnnaibah
                       .filter(
                         (item) =>
-                          new Date(item.date).getMonth() ===
-                            new Date().getMonth() &&
-                          new Date(item.date).getFullYear() ===
-                            new Date().getFullYear()
-                      )
-                      .reduce((acc, item) => acc + item.in, 0) +
-                    dataKasKencleng
-                      .filter(
-                        (item) =>
-                          new Date(item.date).getMonth() ===
-                            new Date().getMonth() &&
-                          new Date(item.date).getFullYear() ===
-                            new Date().getFullYear()
-                      )
-                      .reduce((acc, item) => acc + item.in, 0) +
-                    dataKasLainnya
-                      .filter(
-                        (item) =>
-                          new Date(item.date).getMonth() ===
-                            new Date().getMonth() &&
-                          new Date(item.date).getFullYear() ===
-                            new Date().getFullYear()
+                          new Date(item.date).getMonth() === selectedMonth &&
+                          new Date(item.date).getFullYear() === selectedYear
                       )
                       .reduce((acc, item) => acc + item.in, 0)
-                  ).toLocaleString("id-ID", {
-                    style: "currency",
-                    currency: "IDR",
-                  })}
-                  totalExpense={(
-                    dataKasAnnaibah
+                      .toLocaleString("id-ID", {
+                        style: "currency",
+                        currency: "IDR",
+                      })}
+                    totalExpense={dataKasAnnaibah
                       .filter(
                         (item) =>
-                          new Date(item.date).getMonth() ===
-                            new Date().getMonth() &&
-                          new Date(item.date).getFullYear() ===
-                            new Date().getFullYear()
-                      )
-                      .reduce((acc, item) => acc + item.out, 0) +
-                    dataKasKencleng
-                      .filter(
-                        (item) =>
-                          new Date(item.date).getMonth() ===
-                            new Date().getMonth() &&
-                          new Date(item.date).getFullYear() ===
-                            new Date().getFullYear()
-                      )
-                      .reduce((acc, item) => acc + item.out, 0) +
-                    dataKasLainnya
-                      .filter(
-                        (item) =>
-                          new Date(item.date).getMonth() ===
-                            new Date().getMonth() &&
-                          new Date(item.date).getFullYear() ===
-                            new Date().getFullYear()
+                          new Date(item.date).getMonth() === selectedMonth &&
+                          new Date(item.date).getFullYear() === selectedYear
                       )
                       .reduce((acc, item) => acc + item.out, 0)
-                  ).toLocaleString("id-ID", {
-                    style: "currency",
-                    currency: "IDR",
-                  })}
-                  categories={categories}
-                />
-              </section>
-              <section className="m-2">
-                <ProgramCard
-                  title="Program Pembiasaan"
-                  period="2025"
-                  items={spendItems}
-                />
-              </section>
-            </>
-          )}
-          {stateNavigation === "kas_annaibah" && (
-            <>
-              <section className="mx-2 pt-2">
-                <IncomeCard
-                  title="Laporan Kas An-Naibah"
-                  date={new Date().toLocaleString("id-ID", {
-                    month: "long",
-                    year: "numeric",
-                  })}
-                  total={dataKasAnnaibah
-                    .filter(
-                      (item) =>
-                        new Date(item.date).getMonth() ===
-                          new Date().getMonth() &&
-                        new Date(item.date).getFullYear() ===
-                          new Date().getFullYear()
-                    )
-                    .reduce((acc, item) => acc + item.in, 0)
-                    .toLocaleString("id-ID", {
-                      style: "currency",
-                      currency: "IDR",
+                      .toLocaleString("id-ID", {
+                        style: "currency",
+                        currency: "IDR",
+                      })}
+                    categories={categories.filter(
+                      (cat) => cat.id === "kas_annaibah"
+                    )}
+                  />
+                </section>
+                <section className="m-2">
+                  <InOut
+                    title="Pemasukan Pengeluaran"
+                    period={new Date().toLocaleString("id-ID", {
+                      year: "numeric",
                     })}
-                  totalExpense={dataKasAnnaibah
-                    .filter(
+                    items={dataKasAnnaibah.filter(
                       (item) =>
-                        new Date(item.date).getMonth() ===
-                          new Date().getMonth() &&
-                        new Date(item.date).getFullYear() ===
-                          new Date().getFullYear()
-                    )
-                    .reduce((acc, item) => acc + item.out, 0)
-                    .toLocaleString("id-ID", {
-                      style: "currency",
-                      currency: "IDR",
-                    })}
-                  categories={categories.filter(
-                    (cat) => cat.id === "kas_annaibah"
-                  )}
-                />
-              </section>
-              <section className="m-2">
-                <InOut
-                  title="Pemasukan Pengeluaran"
-                  period={new Date().toLocaleString("id-ID", {
-                    year: "numeric",
-                  })}
-                  items={dataKasAnnaibah}
-                />
-              </section>
-            </>
-          )}
+                        new Date(item.date).getMonth() === selectedMonth &&
+                        new Date(item.date).getFullYear() === selectedYear
+                    )}
+                  />
+                </section>
+              </>
+            )}
 
-          {stateNavigation === "kencleng_annaibah" && (
-            <>
-              <section className="mx-2 pt-2">
-                <IncomeCard
-                  title="Laporan Kas Kencleng"
-                  date={new Date().toLocaleString("id-ID", {
-                    month: "long",
-                    year: "numeric",
-                  })}
-                  total={dataKasKencleng
-                    .filter(
-                      (item) =>
-                        new Date(item.date).getMonth() ===
-                          new Date().getMonth() &&
-                        new Date(item.date).getFullYear() ===
-                          new Date().getFullYear()
-                    )
-                    .reduce((acc, item) => acc + item.in, 0)
-                    .toLocaleString("id-ID", {
-                      style: "currency",
-                      currency: "IDR",
+            {stateNavigation === "kencleng_annaibah" && (
+              <>
+                <section className="mx-2 pt-2">
+                  <IncomeCard
+                    title="Laporan Kas Kencleng"
+                    date={new Date(selectedYear, selectedMonth).toLocaleString(
+                      "id-ID",
+                      {
+                        month: "long",
+                        year: "numeric",
+                      }
+                    )}
+                    total={dataKasKencleng
+                      .filter(
+                        (item) =>
+                          new Date(item.date).getMonth() === selectedMonth &&
+                          new Date(item.date).getFullYear() === selectedYear
+                      )
+                      .reduce((acc, item) => acc + item.in, 0)
+                      .toLocaleString("id-ID", {
+                        style: "currency",
+                        currency: "IDR",
+                      })}
+                    totalExpense={dataKasKencleng
+                      .filter(
+                        (item) =>
+                          new Date(item.date).getMonth() === selectedMonth &&
+                          new Date(item.date).getFullYear() === selectedYear
+                      )
+                      .reduce((acc, item) => acc + item.out, 0)
+                      .toLocaleString("id-ID", {
+                        style: "currency",
+                        currency: "IDR",
+                      })}
+                    categories={categories.filter(
+                      (cat) => cat.id === "kencleng_annaibah"
+                    )}
+                  />
+                </section>
+                <section className="m-2">
+                  <InOut
+                    title="Pemasukan Pengeluaran"
+                    period={new Date().toLocaleString("id-ID", {
+                      year: "numeric",
                     })}
-                  totalExpense={dataKasKencleng
-                    .filter(
+                    items={dataKasKencleng.filter(
                       (item) =>
-                        new Date(item.date).getMonth() ===
-                          new Date().getMonth() &&
-                        new Date(item.date).getFullYear() ===
-                          new Date().getFullYear()
-                    )
-                    .reduce((acc, item) => acc + item.out, 0)
-                    .toLocaleString("id-ID", {
-                      style: "currency",
-                      currency: "IDR",
-                    })}
-                  categories={categories.filter(
-                    (cat) => cat.id === "kencleng_annaibah"
-                  )}
-                />
-              </section>
-              <section className="m-2">
-                <InOut
-                  title="Pemasukan Pengeluaran"
-                  period={new Date().toLocaleString("id-ID", {
-                    year: "numeric",
-                  })}
-                  items={dataKasKencleng}
-                />
-              </section>
-            </>
-          )}
+                        new Date(item.date).getMonth() === selectedMonth &&
+                        new Date(item.date).getFullYear() === selectedYear
+                    )}
+                  />
+                </section>
+              </>
+            )}
 
-          {stateNavigation === "wakaf_annaibah" && (
-            <>
-              <section className="mx-2 pt-2">
-                <IncomeCard
-                  title="Laporan Kas Lainnya"
-                  date={new Date().toLocaleString("id-ID", {
-                    month: "long",
-                    year: "numeric",
-                  })}
-                  total={dataKasLainnya
-                    .filter(
-                      (item) =>
-                        new Date(item.date).getMonth() ===
-                          new Date().getMonth() &&
-                        new Date(item.date).getFullYear() ===
-                          new Date().getFullYear()
-                    )
-                    .reduce((acc, item) => acc + item.in, 0)
-                    .toLocaleString("id-ID", {
-                      style: "currency",
-                      currency: "IDR",
+            {stateNavigation === "wakaf_annaibah" && (
+              <>
+                <section className="mx-2 pt-2">
+                  <IncomeCard
+                    title="Laporan Kas Lainnya"
+                    date={new Date(selectedYear, selectedMonth).toLocaleString(
+                      "id-ID",
+                      {
+                        month: "long",
+                        year: "numeric",
+                      }
+                    )}
+                    total={dataKasLainnya
+                      .filter(
+                        (item) =>
+                          new Date(item.date).getMonth() === selectedMonth &&
+                          new Date(item.date).getFullYear() === selectedYear
+                      )
+                      .reduce((acc, item) => acc + item.in, 0)
+                      .toLocaleString("id-ID", {
+                        style: "currency",
+                        currency: "IDR",
+                      })}
+                    totalExpense={dataKasLainnya
+                      .filter(
+                        (item) =>
+                          new Date(item.date).getMonth() === selectedMonth &&
+                          new Date(item.date).getFullYear() === selectedYear
+                      )
+                      .reduce((acc, item) => acc + item.out, 0)
+                      .toLocaleString("id-ID", {
+                        style: "currency",
+                        currency: "IDR",
+                      })}
+                    categories={categories.filter(
+                      (cat) => cat.id === "wakaf_annaibah"
+                    )}
+                  />
+                </section>
+                <section className="m-2">
+                  <InOut
+                    title="Pemasukan Pengeluaran"
+                    period={new Date().toLocaleString("id-ID", {
+                      year: "numeric",
                     })}
-                  totalExpense={dataKasLainnya
-                    .filter(
+                    items={dataKasLainnya.filter(
                       (item) =>
-                        new Date(item.date).getMonth() ===
-                          new Date().getMonth() &&
-                        new Date(item.date).getFullYear() ===
-                          new Date().getFullYear()
-                    )
-                    .reduce((acc, item) => acc + item.out, 0)
-                    .toLocaleString("id-ID", {
-                      style: "currency",
-                      currency: "IDR",
-                    })}
-                  categories={categories.filter(
-                    (cat) => cat.id === "wakaf_annaibah"
-                  )}
-                />
-              </section>
-              <section className="m-2">
-                <InOut
-                  title="Pemasukan Pengeluaran"
-                  period={new Date().toLocaleString("id-ID", {
-                    year: "numeric",
-                  })}
-                  items={dataKasLainnya}
-                />
-              </section>
-            </>
-          )}
+                        new Date(item.date).getMonth() === selectedMonth &&
+                        new Date(item.date).getFullYear() === selectedYear
+                    )}
+                  />
+                </section>
+              </>
+            )}
 
-          <section className="flex justify-center p-4">
-            <WhatsAppButton
-              phone="6281916511138"
-              message="Halo, saya ingin memberikan masukan."
-              title="Berikan Masukan"
-            />
-          </section>
+            <section className="flex justify-center p-4">
+              <WhatsAppButton
+                phone="6281916511138"
+                message="Halo, saya ingin memberikan masukan."
+                title="Berikan Masukan"
+              />
+            </section>
+          </div>
         </div>
 
         {/* bottom navigation selalu di bawah */}
