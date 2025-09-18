@@ -24,7 +24,7 @@ const categories = [
   {
     id: "wakaf_annaibah",
     name: "Lainnya",
-    value: "Rp 115.000,00",
+    value: "Rp 215.000,00",
     color: "#6b7280",
   }, // gray
 ];
@@ -248,6 +248,13 @@ const inOutWakafAnnaibah = [
     desc: "Biaya tidak terduga Manaqib At-Taqwa",
     saldo: 115000,
   },
+  {
+    date: "18 September 2025",
+    in: 100000,
+    out: 0,
+    desc: "Hj. Noneng S dari H. Sutari",
+    saldo: 215000,
+  },
 ];
 function App() {
   const [stateNavigation, setStateNavigation] = React.useState("home");
@@ -265,7 +272,7 @@ function App() {
                     month: "long",
                     year: "numeric",
                   })}
-                  total="Rp 1.350.000,00"
+                  total="Rp 1.450.000,00"
                   totalExpense="Rp 1.280.000,00"
                   categories={categories}
                 />
@@ -346,7 +353,7 @@ function App() {
                     month: "long",
                     year: "numeric",
                   })}
-                  total="Rp 850.000,00 "
+                  total="Rp 950.000,00 "
                   totalExpense="Rp 1.230.000,00"
                   categories={categories.filter(
                     (cat) => cat.id === "wakaf_annaibah"
