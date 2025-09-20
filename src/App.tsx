@@ -1,6 +1,6 @@
 // import "./App.css";
 
-import { GlassWaterIcon } from "lucide-react";
+import { ConstructionIcon, GlassWaterIcon } from "lucide-react";
 import BottomNavigation from "./components/bottom-navigation";
 import IncomeCard from "./components/IncomeCard";
 import ProgramCard from "./components/ProgramCard";
@@ -33,6 +33,23 @@ const spendItems = [
     subtitle: "1.5 Dus Gelas",
     amount: "Rp 112.500,00",
     date: "75.000,00/Dus",
+  },
+];
+
+const activityItems = [
+  {
+    icon: <ConstructionIcon className="h-4 w-4 text-gray-600" />,
+    title: "Perbaikan WC Mampet ",
+    subtitle: "Mang Ica",
+    amount: "20 September 2025",
+    date: "-",
+  },
+  {
+    icon: <ConstructionIcon className="h-4 w-4 text-gray-600" />,
+    title: "Pembersihan Makam Keluarga",
+    subtitle: "Mang Ica",
+    amount: "20 September 2025",
+    date: "-",
   },
 ];
 
@@ -251,6 +268,13 @@ function App() {
                       currency: "IDR",
                     })}
                     categories={categories}
+                  />
+                </section>
+                <section className="m-2">
+                  <ProgramCard
+                    title="Kegiatan"
+                    period="2025"
+                    items={activityItems}
                   />
                 </section>
                 <section className="m-2">
