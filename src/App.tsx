@@ -11,6 +11,7 @@ import kasAnnaibahData from "./data/kas_annaibah.json";
 import kasKenclengData from "./data/kas_kencleng.json";
 import kasLainnyaData from "./data/kas_lainnya.json";
 import { hitungSaldo } from "./utils";
+import ActivityCard from "./components/ActivityCard";
 
 const spendItems = [
   {
@@ -40,16 +41,16 @@ const activityItems = [
   {
     icon: <ConstructionIcon className="h-4 w-4 text-gray-600" />,
     title: "Perbaikan WC Mampet ",
-    subtitle: "Mang Ica",
-    amount: "20 September 2025",
-    date: "-",
+    subtitle: "Mang Ica + Hanif + Winardi",
+    amount: 30000,
+    date: "2025-09-20",
   },
   {
     icon: <ConstructionIcon className="h-4 w-4 text-gray-600" />,
     title: "Pembersihan Makam Keluarga",
-    subtitle: "Mang Ica",
-    amount: "20 September 2025",
-    date: "-",
+    subtitle: "Mang Ica + Konsumsi",
+    amount: 150000,
+    date: "2025-09-20",
   },
 ];
 
@@ -271,7 +272,7 @@ function App() {
                   />
                 </section>
                 <section className="m-2">
-                  <ProgramCard
+                  <ActivityCard
                     title="Kegiatan"
                     period="2025"
                     items={activityItems}

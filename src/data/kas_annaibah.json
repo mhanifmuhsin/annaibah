@@ -1,7 +1,7 @@
 [
   {
     "date": "2025-08-31",
-    "in": 330000,
+    "in": 333000,
     "out": 0,
     "desc": "Saldo"
   },
@@ -10,5 +10,17 @@
     "in": 240000,
     "out": 0,
     "desc": "Muhamad Hanif Muhsin"
+  },
+  {
+    "date": "2025-09-20",
+    "in": 200000,
+    "out": 0,
+    "desc": "Teh Reni"
+  },
+  {
+    "date": "2025-09-20",
+    "in": 80000,
+    "out": 0,
+    "desc": "Ahmad Faishal"
   }
 ]
