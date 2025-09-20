@@ -47,6 +47,19 @@ function App() {
   const [selectedYear, setSelectedYear] = React.useState(
     new Date().getFullYear()
   );
+  const [searchDesc, setSearchDesc] = React.useState("");
+
+  // Helper: search by description
+  function searchByDesc<T extends { desc?: string }>(
+    data: T[],
+    query: string
+  ): T[] {
+    if (!query) return data;
+    return data.filter(
+      (item) =>
+        item.desc && item.desc.toLowerCase().includes(query.toLowerCase())
+    );
+  }
   const categories = [
     {
       id: "kas_annaibah",
@@ -111,50 +124,66 @@ function App() {
         <div className="mx-auto w-full max-w-md flex-1 bg-gradient-to-b from-red-400 via-red-50 to-white shadow-md pb-20">
           {/* Filter by month and year */}
           <div
-            className="fixed top-0 left-1/2 -translate-x-1/2 z-20 w-full max-w-md text-xs flex gap-3 justify-center items-center mx-auto px-4 py-1 bg-white shadow-md border-b border-pink-200"
+            className="fixed top-0 left-1/2 -translate-x-1/2 z-20 w-full max-w-md text-xs  mx-auto px-4 py-1 bg-white shadow-md border-b border-pink-200 space-y-1"
             style={{ backdropFilter: "blur(8px)" }}
           >
-            <label
-              htmlFor="month"
-              className="text-xs text-gray-600 font-medium"
-            >
-              Bulan
-            </label>
-            <select
-              id="month"
-              className="border border-gray-300 rounded-md px-3 py-1 focus:outline-none focus:ring-2 focus:ring-pink-400 bg-gray-50 text-gray-700 backdrop-blur-md bg-opacity-70"
-              value={selectedMonth}
-              onChange={(e) => setSelectedMonth(Number(e.target.value))}
-            >
-              {Array.from({
-                length:
-                  selectedYear === new Date().getFullYear()
-                    ? new Date().getMonth() + 1
-                    : 12,
-              }).map((_, i) => (
-                <option key={i} value={i}>
-                  {new Date(0, i).toLocaleString("id-ID", { month: "long" })}
-                </option>
-              ))}
-            </select>
-            <label htmlFor="year" className="text-xs text-gray-600 font-medium">
-              Tahun
-            </label>
-            <select
-              id="year"
-              className="border border-gray-300 rounded-md px-3 py-1 focus:outline-none focus:ring-2 focus:ring-pink-400 bg-gray-50 text-gray-700 backdrop-blur-md bg-opacity-70"
-              value={selectedYear}
-              onChange={(e) => setSelectedYear(Number(e.target.value))}
-            >
-              {Array.from({ length: 5 }).map((_, i) => {
-                const year = new Date().getFullYear() - i;
-                return (
-                  <option key={year} value={year}>
-                    {year}
+            <div className="flex items-center justify-center gap-2">
+              <label
+                htmlFor="month"
+                className="text-xs text-gray-600 font-medium"
+              >
+                Bulan
+              </label>
+              <select
+                id="month"
+                className="border border-gray-300 rounded-md px-3 py-1 focus:outline-none focus:ring-2 focus:ring-pink-400 bg-gray-50 text-gray-700 backdrop-blur-md bg-opacity-70"
+                value={selectedMonth}
+                onChange={(e) => setSelectedMonth(Number(e.target.value))}
+              >
+                {Array.from({
+                  length:
+                    selectedYear === new Date().getFullYear()
+                      ? new Date().getMonth() + 1
+                      : 12,
+                }).map((_, i) => (
+                  <option key={i} value={i}>
+                    {new Date(0, i).toLocaleString("id-ID", { month: "long" })}
                   </option>
-                );
-              })}
-            </select>
+                ))}
+              </select>
+              <label
+                htmlFor="year"
+                className="text-xs text-gray-600 font-medium"
+              >
+                Tahun
+              </label>
+              <select
+                id="year"
+                className="border border-gray-300 rounded-md px-3 py-1 focus:outline-none focus:ring-2 focus:ring-pink-400 bg-gray-50 text-gray-700 backdrop-blur-md bg-opacity-70"
+                value={selectedYear}
+                onChange={(e) => setSelectedYear(Number(e.target.value))}
+              >
+                {Array.from({ length: 5 }).map((_, i) => {
+                  const year = new Date().getFullYear() - i;
+                  return (
+                    <option key={year} value={year}>
+                      {year}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
+            <div className="flex justify-center w-full">
+              <input
+                type="search"
+                placeholder="Cari nama saya..."
+                className="w-full border border-gray-300 rounded-md px-3 py-1 focus:outline-none focus:ring-2 focus:ring-pink-400 bg-gray-50 text-gray-700 backdrop-blur-md bg-opacity-70"
+                value={searchDesc}
+                onChange={(e) => setSearchDesc(e.target.value)}
+                style={{ minWidth: 120 }}
+              />
+            </div>
+            {/* Search by description */}
           </div>
           <div className="pt-10">
             {stateNavigation === "home" && (
@@ -278,10 +307,13 @@ function App() {
                     period={new Date().toLocaleString("id-ID", {
                       year: "numeric",
                     })}
-                    items={dataKasAnnaibah.filter(
-                      (item) =>
-                        new Date(item.date).getMonth() === selectedMonth &&
-                        new Date(item.date).getFullYear() === selectedYear
+                    items={searchByDesc(
+                      dataKasAnnaibah.filter(
+                        (item) =>
+                          new Date(item.date).getMonth() === selectedMonth &&
+                          new Date(item.date).getFullYear() === selectedYear
+                      ),
+                      searchDesc
                     )}
                   />
                 </section>
@@ -333,10 +365,13 @@ function App() {
                     period={new Date().toLocaleString("id-ID", {
                       year: "numeric",
                     })}
-                    items={dataKasKencleng.filter(
-                      (item) =>
-                        new Date(item.date).getMonth() === selectedMonth &&
-                        new Date(item.date).getFullYear() === selectedYear
+                    items={searchByDesc(
+                      dataKasKencleng.filter(
+                        (item) =>
+                          new Date(item.date).getMonth() === selectedMonth &&
+                          new Date(item.date).getFullYear() === selectedYear
+                      ),
+                      searchDesc
                     )}
                   />
                 </section>
@@ -388,10 +423,13 @@ function App() {
                     period={new Date().toLocaleString("id-ID", {
                       year: "numeric",
                     })}
-                    items={dataKasLainnya.filter(
-                      (item) =>
-                        new Date(item.date).getMonth() === selectedMonth &&
-                        new Date(item.date).getFullYear() === selectedYear
+                    items={searchByDesc(
+                      dataKasLainnya.filter(
+                        (item) =>
+                          new Date(item.date).getMonth() === selectedMonth &&
+                          new Date(item.date).getFullYear() === selectedYear
+                      ),
+                      searchDesc
                     )}
                   />
                 </section>
