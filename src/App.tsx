@@ -185,7 +185,7 @@ function App() {
             </div>
             {/* Search by description */}
           </div>
-          <div className="pt-10">
+          <div className="pt-16">
             {stateNavigation === "home" && (
               <>
                 <section className="mx-2 pt-2">
