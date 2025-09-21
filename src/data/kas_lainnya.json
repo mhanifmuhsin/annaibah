@@ -191,5 +191,23 @@
     "in": 0,
     "out": 30000,
     "desc": "Soda Api"
+  },
+  {
+    "date": "2025-09-20",
+    "in": 100000,
+    "out": 0,
+    "desc": "Hj. Iis Mintarsih (Manaqib At-Taqwa)"
+  },
+  {
+    "date": "2025-09-20",
+    "in": 100000,
+    "out": 0,
+    "desc": "Hj. Iis Mintarsih (Infaq Guru Ngaji)"
+  },
+  {
+    "date": "2025-09-21",
+    "in": 0,
+    "out": 100000,
+    "desc": "Infaq Guru Ngaji ke Teh Euis"
   }
 ]
