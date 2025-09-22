@@ -16,24 +16,17 @@ import ActivityCard from "./components/ActivityCard";
 const spendItems = [
   {
     icon: <GlassWaterIcon className="h-4 w-4 text-gray-600" />,
-    title: "Sirraya di Manaqib An-Naibah",
+    title: "Sirraya Manaqib An-Naibah",
     subtitle: "3 Dus Botol",
+    amount: "Rp 225.000,00",
+    date: "75.000,00/Dus",
+  },
+  {
+    icon: <GlassWaterIcon className="h-4 w-4 text-gray-600" />,
+    title: "Sirraya Manaqib At-Taqwa + Ibu Rella",
+    subtitle: "3 Dus Gelas",
     amount: "Rp 105.000,00",
     date: "35.500,00/Dus",
-  },
-  {
-    icon: <GlassWaterIcon className="h-4 w-4 text-gray-600" />,
-    title: "Sirraya di Manaqib At-Taqwa",
-    subtitle: "1.5 Dus Gelas",
-    amount: "Rp 112.500,00",
-    date: "75.000,00/Dus",
-  },
-  {
-    icon: <GlassWaterIcon className="h-4 w-4 text-gray-600" />,
-    title: "Sirraya di Manaqib Ibu Rella At-Taqwa",
-    subtitle: "1.5 Dus Gelas",
-    amount: "Rp 112.500,00",
-    date: "75.000,00/Dus",
   },
 ];
 
