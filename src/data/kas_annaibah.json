@@ -34,5 +34,17 @@
     "in": 150000,
     "out": 0,
     "desc": "Kencleng (Tabaruk Kitab Fadhoilus Shuhur)"
+  },
+  {
+    "date": "2025-09-26",
+    "in": 100000,
+    "out": 0,
+    "desc": "Hj. Noneng Sumiaty dari Kas Lainnya"
+  },
+  {
+    "date": "2025-09-28",
+    "in": 0,
+    "out": 1160000,
+    "desc": "Manaqiban"
   }
 ]

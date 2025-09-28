@@ -22,5 +22,23 @@
     "in": 0,
     "out": 150000,
     "desc": "Tabaruk Kitab Fadhoilus Shuhur"
+  },
+  {
+    "date": "2025-09-26",
+    "in": 275000,
+    "out": 0,
+    "desc": "Dari kencleng"
+  },
+  {
+    "date": "2025-09-26",
+    "in": 0,
+    "out": 100000,
+    "desc": "Manaqib Pak Bambang"
+  },
+  {
+    "date": "2025-09-26",
+    "in": 0,
+    "out": 150000,
+    "desc": "Mengganti Kas Lainnya Manaqib Ust. Arif"
   }
 ]

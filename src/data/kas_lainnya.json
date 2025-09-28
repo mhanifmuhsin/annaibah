@@ -209,5 +209,17 @@
     "in": 0,
     "out": 100000,
     "desc": "Infaq Guru Ngaji ke Teh Euis"
+  },
+  {
+    "date": "2025-09-26",
+    "in": 0,
+    "out": 100000,
+    "desc": "Manaqib An-Naibah Hj. Noneng Sumiaty"
+  },
+  {
+    "date": "2025-09-26",
+    "in": 150000,
+    "out": 0,
+    "desc": "Dari kencleng pengganti Manaqib Ust. Arif"
   }
 ]
