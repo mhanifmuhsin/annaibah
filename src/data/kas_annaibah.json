@@ -46,5 +46,23 @@
     "in": 0,
     "out": 1160000,
     "desc": "Manaqiban"
+  },
+  {
+    "date": "2025-09-30",
+    "in": 25000,
+    "out": 0,
+    "desc": "Sisa Manaqiban"
+  },
+  {
+    "date": "2025-10-01",
+    "in": 240000,
+    "out": 0,
+    "desc": "Muhamad Hanif Muhsin"
+  },
+  {
+    "date": "2025-10-01",
+    "in": 80000,
+    "out": 0,
+    "desc": "Ahmad Faishal"
   }
 ]
