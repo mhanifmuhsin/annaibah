@@ -245,5 +245,23 @@
     "in": 50000,
     "out": 0,
     "desc": "Hj. Noneng Sumiaty (Marbot)"
+  },
+  {
+    "date": "2025-10-03",
+    "in": 100000,
+    "out": 0,
+    "desc": "Dari kencleng untuk Bapak Agus Sopandi (Imam Masjid)"
+  },
+  {
+    "date": "2025-10-03",
+    "in": 0,
+    "out": 36000,
+    "desc": "BPJS Bapak Agus Sopandi"
+  },
+  {
+    "date": "2025-10-03",
+    "in": 0,
+    "out": 164000,
+    "desc": "Bapak Agus Sopandi (sebagai imam mesjid)"
   }
 ]

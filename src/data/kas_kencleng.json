@@ -40,5 +40,17 @@
     "in": 0,
     "out": 150000,
     "desc": "Mengganti Kas Lainnya Manaqib Ust. Arif"
+  },
+  {
+    "date": "2025-10-03",
+    "in": 200000,
+    "out": 0,
+    "desc": "Dari Kencleng"
+  },
+  {
+    "date": "2025-10-03",
+    "in": 0,
+    "out": 100000,
+    "desc": "H. Agus Sopandi (Imam Mesjid) ke Kas Lainnya"
   }
 ]
