@@ -1,11 +1,11 @@
 // import "./App.css";
 
-import { ConstructionIcon, GlassWaterIcon } from "lucide-react";
+import { ArrowUpFromDot, ConstructionIcon, GlassWaterIcon } from "lucide-react";
 import BottomNavigation from "./components/bottom-navigation";
 import IncomeCard from "./components/IncomeCard";
 import ProgramCard from "./components/ProgramCard";
 import WhatsAppButton from "./components/WhatsAppButton";
-import React from "react";
+import React, { useEffect } from "react";
 import InOut from "./components/InOut";
 import kasAnnaibahData from "./data/kas_annaibah.json";
 import kasKenclengData from "./data/kas_kencleng.json";
@@ -52,6 +52,8 @@ function App() {
   const dataKasAnnaibah = hitungSaldo(kasAnnaibahData);
   const dataKasKencleng = hitungSaldo(kasKenclengData);
   const dataKasLainnya = hitungSaldo(kasLainnyaData);
+  const [visible, setVisible] = React.useState(false);
+
   const [selectedMonth, setSelectedMonth] = React.useState(
     new Date().getMonth()
   );
@@ -127,6 +129,19 @@ function App() {
       color: "#6b7280",
     }, // gray
   ];
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
 
   return (
     <>
@@ -461,6 +476,15 @@ function App() {
                 title="Berikan Masukan"
               />
             </section>
+            <button
+              className={`fixed bottom-28 right-2 z-30 bg-red-600  text-white rounded-full p-2 shadow-lg transition-all ${
+                visible ? "opacity-100 scale-100" : "opacity-0 scale-0"
+              }`}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              aria-label="Scroll to top"
+            >
+              <ArrowUpFromDot className="w-3 h-3" />
+            </button>
           </div>
         </div>
 
