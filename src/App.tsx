@@ -10,6 +10,10 @@ import InOut from "./components/InOut";
 import kasAnnaibahData from "./data/kas_annaibah.json";
 import kasKenclengData from "./data/kas_kencleng.json";
 import kasLainnyaData from "./data/kas_lainnya.json";
+import kasAttaqwa from "./data/kas_attaqwa.json";
+import kasUsama from "./data/kas_usama.json";
+import kasIbuRella from "./data/kas_ibu_rella.json";
+import kasWakaf from "./data/kas_wakaf.json";
 import { hitungSaldo } from "./utils";
 import ActivityCard from "./components/ActivityCard";
 
@@ -52,6 +56,10 @@ function App() {
   const dataKasAnnaibah = hitungSaldo(kasAnnaibahData);
   const dataKasKencleng = hitungSaldo(kasKenclengData);
   const dataKasLainnya = hitungSaldo(kasLainnyaData);
+  const dataKasAttaqwa = hitungSaldo(kasAttaqwa);
+  const dataKasUsama = hitungSaldo(kasUsama);
+  const dataKasIbuRella = hitungSaldo(kasIbuRella);
+  const dataKasWakaf = hitungSaldo(kasWakaf);
   const [visible, setVisible] = React.useState(false);
 
   const [selectedMonth, setSelectedMonth] = React.useState(
@@ -128,6 +136,78 @@ function App() {
       })(),
       color: "#6b7280",
     }, // gray
+    {
+      id: "at_taqwa",
+      name: "At-Taqwa",
+      value: (() => {
+        const filtered = dataKasAttaqwa.filter(
+          (item) =>
+            new Date(item.date).getMonth() === selectedMonth &&
+            new Date(item.date).getFullYear() === selectedYear
+        );
+        return filtered.length
+          ? filtered[filtered.length - 1].saldo.toLocaleString("id-ID", {
+              style: "currency",
+              currency: "IDR",
+            })
+          : "Rp 0,00";
+      })(),
+      color: "yellow",
+    },
+    {
+      id: "usama",
+      name: "USAMA",
+      value: (() => {
+        const filtered = dataKasUsama.filter(
+          (item) =>
+            new Date(item.date).getMonth() === selectedMonth &&
+            new Date(item.date).getFullYear() === selectedYear
+        );
+        return filtered.length
+          ? filtered[filtered.length - 1].saldo.toLocaleString("id-ID", {
+              style: "currency",
+              currency: "IDR",
+            })
+          : "Rp 0,00";
+      })(),
+      color: "purple",
+    },
+    {
+      id: "ibu_rella",
+      name: "Ibu Rella",
+      value: (() => {
+        const filtered = dataKasIbuRella.filter(
+          (item) =>
+            new Date(item.date).getMonth() === selectedMonth &&
+            new Date(item.date).getFullYear() === selectedYear
+        );
+        return filtered.length
+          ? filtered[filtered.length - 1].saldo.toLocaleString("id-ID", {
+              style: "currency",
+              currency: "IDR",
+            })
+          : "Rp 0,00";
+      })(),
+      color: "green",
+    },
+    {
+      id: "wakaf",
+      name: "Wakaf",
+      value: (() => {
+        const filtered = dataKasWakaf.filter(
+          (item) =>
+            new Date(item.date).getMonth() === selectedMonth &&
+            new Date(item.date).getFullYear() === selectedYear
+        );
+        return filtered.length
+          ? filtered[filtered.length - 1].saldo.toLocaleString("id-ID", {
+              style: "currency",
+              currency: "IDR",
+            })
+          : "Rp 0,00";
+      })(),
+      color: "green",
+    },
   ];
 
   useEffect(() => {
@@ -245,6 +325,34 @@ function App() {
                             new Date(item.date).getMonth() === selectedMonth &&
                             new Date(item.date).getFullYear() === selectedYear
                         )
+                        .reduce((acc, item) => acc + item.in, 0) +
+                      dataKasAttaqwa
+                        .filter(
+                          (item) =>
+                            new Date(item.date).getMonth() === selectedMonth &&
+                            new Date(item.date).getFullYear() === selectedYear
+                        )
+                        .reduce((acc, item) => acc + item.in, 0) +
+                      dataKasUsama
+                        .filter(
+                          (item) =>
+                            new Date(item.date).getMonth() === selectedMonth &&
+                            new Date(item.date).getFullYear() === selectedYear
+                        )
+                        .reduce((acc, item) => acc + item.in, 0) +
+                      dataKasIbuRella
+                        .filter(
+                          (item) =>
+                            new Date(item.date).getMonth() === selectedMonth &&
+                            new Date(item.date).getFullYear() === selectedYear
+                        )
+                        .reduce((acc, item) => acc + item.in, 0) +
+                      dataKasWakaf
+                        .filter(
+                          (item) =>
+                            new Date(item.date).getMonth() === selectedMonth &&
+                            new Date(item.date).getFullYear() === selectedYear
+                        )
                         .reduce((acc, item) => acc + item.in, 0)
                     ).toLocaleString("id-ID", {
                       style: "currency",
@@ -266,6 +374,34 @@ function App() {
                         )
                         .reduce((acc, item) => acc + item.out, 0) +
                       dataKasLainnya
+                        .filter(
+                          (item) =>
+                            new Date(item.date).getMonth() === selectedMonth &&
+                            new Date(item.date).getFullYear() === selectedYear
+                        )
+                        .reduce((acc, item) => acc + item.out, 0) +
+                      dataKasAttaqwa
+                        .filter(
+                          (item) =>
+                            new Date(item.date).getMonth() === selectedMonth &&
+                            new Date(item.date).getFullYear() === selectedYear
+                        )
+                        .reduce((acc, item) => acc + item.out, 0) +
+                      dataKasIbuRella
+                        .filter(
+                          (item) =>
+                            new Date(item.date).getMonth() === selectedMonth &&
+                            new Date(item.date).getFullYear() === selectedYear
+                        )
+                        .reduce((acc, item) => acc + item.out, 0) +
+                      dataKasWakaf
+                        .filter(
+                          (item) =>
+                            new Date(item.date).getMonth() === selectedMonth &&
+                            new Date(item.date).getFullYear() === selectedYear
+                        )
+                        .reduce((acc, item) => acc + item.out, 0) +
+                      dataKasUsama
                         .filter(
                           (item) =>
                             new Date(item.date).getMonth() === selectedMonth &&
@@ -458,6 +594,232 @@ function App() {
                     })}
                     items={searchByDesc(
                       dataKasLainnya.filter(
+                        (item) =>
+                          new Date(item.date).getMonth() === selectedMonth &&
+                          new Date(item.date).getFullYear() === selectedYear
+                      ),
+                      searchDesc
+                    )}
+                  />
+                </section>
+              </>
+            )}
+
+            {stateNavigation === "at_taqwa" && (
+              <>
+                <section className="mx-2 pt-2">
+                  <IncomeCard
+                    title="At-Taqwa"
+                    date={new Date(selectedYear, selectedMonth).toLocaleString(
+                      "id-ID",
+                      {
+                        month: "long",
+                        year: "numeric",
+                      }
+                    )}
+                    total={dataKasAttaqwa
+                      .filter(
+                        (item) =>
+                          new Date(item.date).getMonth() === selectedMonth &&
+                          new Date(item.date).getFullYear() === selectedYear
+                      )
+                      .reduce((acc, item) => acc + item.in, 0)
+                      .toLocaleString("id-ID", {
+                        style: "currency",
+                        currency: "IDR",
+                      })}
+                    totalExpense={dataKasAttaqwa
+                      .filter(
+                        (item) =>
+                          new Date(item.date).getMonth() === selectedMonth &&
+                          new Date(item.date).getFullYear() === selectedYear
+                      )
+                      .reduce((acc, item) => acc + item.out, 0)
+                      .toLocaleString("id-ID", {
+                        style: "currency",
+                        currency: "IDR",
+                      })}
+                    categories={categories.filter(
+                      (cat) => cat.id === "at_taqwa"
+                    )}
+                  />
+                </section>
+                <section className="m-2">
+                  <InOut
+                    title="Pemasukan Pengeluaran"
+                    period={new Date().toLocaleString("id-ID", {
+                      year: "numeric",
+                    })}
+                    items={searchByDesc(
+                      dataKasAttaqwa.filter(
+                        (item) =>
+                          new Date(item.date).getMonth() === selectedMonth &&
+                          new Date(item.date).getFullYear() === selectedYear
+                      ),
+                      searchDesc
+                    )}
+                  />
+                </section>
+              </>
+            )}
+
+            {stateNavigation === "usama" && (
+              <>
+                <section className="mx-2 pt-2">
+                  <IncomeCard
+                    title="USAMA"
+                    date={new Date(selectedYear, selectedMonth).toLocaleString(
+                      "id-ID",
+                      {
+                        month: "long",
+                        year: "numeric",
+                      }
+                    )}
+                    total={dataKasUsama
+                      .filter(
+                        (item) =>
+                          new Date(item.date).getMonth() === selectedMonth &&
+                          new Date(item.date).getFullYear() === selectedYear
+                      )
+                      .reduce((acc, item) => acc + item.in, 0)
+                      .toLocaleString("id-ID", {
+                        style: "currency",
+                        currency: "IDR",
+                      })}
+                    totalExpense={dataKasUsama
+                      .filter(
+                        (item) =>
+                          new Date(item.date).getMonth() === selectedMonth &&
+                          new Date(item.date).getFullYear() === selectedYear
+                      )
+                      .reduce((acc, item) => acc + item.out, 0)
+                      .toLocaleString("id-ID", {
+                        style: "currency",
+                        currency: "IDR",
+                      })}
+                    categories={categories.filter((cat) => cat.id === "usama")}
+                  />
+                </section>
+                <section className="m-2">
+                  <InOut
+                    title="Pemasukan Pengeluaran"
+                    period={new Date().toLocaleString("id-ID", {
+                      year: "numeric",
+                    })}
+                    items={searchByDesc(
+                      dataKasUsama.filter(
+                        (item) =>
+                          new Date(item.date).getMonth() === selectedMonth &&
+                          new Date(item.date).getFullYear() === selectedYear
+                      ),
+                      searchDesc
+                    )}
+                  />
+                </section>
+              </>
+            )}
+
+            {stateNavigation === "ibu_rella" && (
+              <>
+                <section className="mx-2 pt-2">
+                  <IncomeCard
+                    title="Ibu Rella"
+                    date={new Date(selectedYear, selectedMonth).toLocaleString(
+                      "id-ID",
+                      {
+                        month: "long",
+                        year: "numeric",
+                      }
+                    )}
+                    total={dataKasIbuRella
+                      .filter(
+                        (item) =>
+                          new Date(item.date).getMonth() === selectedMonth &&
+                          new Date(item.date).getFullYear() === selectedYear
+                      )
+                      .reduce((acc, item) => acc + item.in, 0)
+                      .toLocaleString("id-ID", {
+                        style: "currency",
+                        currency: "IDR",
+                      })}
+                    totalExpense={dataKasIbuRella
+                      .filter(
+                        (item) =>
+                          new Date(item.date).getMonth() === selectedMonth &&
+                          new Date(item.date).getFullYear() === selectedYear
+                      )
+                      .reduce((acc, item) => acc + item.out, 0)
+                      .toLocaleString("id-ID", {
+                        style: "currency",
+                        currency: "IDR",
+                      })}
+                    categories={categories.filter((cat) => cat.id === "usama")}
+                  />
+                </section>
+                <section className="m-2">
+                  <InOut
+                    title="Pemasukan Pengeluaran"
+                    period={new Date().toLocaleString("id-ID", {
+                      year: "numeric",
+                    })}
+                    items={searchByDesc(
+                      dataKasIbuRella.filter(
+                        (item) =>
+                          new Date(item.date).getMonth() === selectedMonth &&
+                          new Date(item.date).getFullYear() === selectedYear
+                      ),
+                      searchDesc
+                    )}
+                  />
+                </section>
+              </>
+            )}
+
+            {stateNavigation === "wakaf" && (
+              <>
+                <section className="mx-2 pt-2">
+                  <IncomeCard
+                    title="Wakaf"
+                    date={new Date(selectedYear, selectedMonth).toLocaleString(
+                      "id-ID",
+                      {
+                        month: "long",
+                        year: "numeric",
+                      }
+                    )}
+                    total={dataKasWakaf
+                      .filter(
+                        (item) =>
+                          new Date(item.date).getMonth() === selectedMonth &&
+                          new Date(item.date).getFullYear() === selectedYear
+                      )
+                      .reduce((acc, item) => acc + item.in, 0)
+                      .toLocaleString("id-ID", {
+                        style: "currency",
+                        currency: "IDR",
+                      })}
+                    totalExpense={dataKasWakaf
+                      .filter(
+                        (item) =>
+                          new Date(item.date).getMonth() === selectedMonth &&
+                          new Date(item.date).getFullYear() === selectedYear
+                      )
+                      .reduce((acc, item) => acc + item.out, 0)
+                      .toLocaleString("id-ID", {
+                        style: "currency",
+                        currency: "IDR",
+                      })}
+                    categories={categories.filter((cat) => cat.id === "wakaf")}
+                  />
+                </section>
+                <section className="m-2">
+                  <InOut
+                    title="Pemasukan Pengeluaran"
+                    period={new Date().toLocaleString("id-ID", {
+                      year: "numeric",
+                    })}
+                    items={searchByDesc(
+                      dataKasWakaf.filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
                           new Date(item.date).getFullYear() === selectedYear

@@ -222,24 +222,14 @@
     "out": 0,
     "desc": "Dari kencleng pengganti Manaqib Ust. Arif"
   },
-  {
-    "date": "2025-10-01",
-    "in": 195000,
-    "out": 0,
-    "desc": "USAMA Hj. Noneng Sumiaty 3 Bulan (Okt, Nov, Des)"
-  },
+
   {
     "date": "2025-10-01",
     "in": 50000,
     "out": 0,
     "desc": "Muhamad Hanif Muhsin (Marbot)"
   },
-  {
-    "date": "2025-10-03",
-    "in": 100000,
-    "out": 0,
-    "desc": "Hj. Noneng Sumiaty (Manaqib At-Taqwa)"
-  },
+
   {
     "date": "2025-10-03",
     "in": 50000,
@@ -264,48 +254,7 @@
     "out": 164000,
     "desc": "H. Agus Sopandi (sebagai imam mesjid)"
   },
-  {
-    "date": "2025-10-03",
-    "in": 38000,
-    "out": 0,
-    "desc": "USAMA Teh Reni"
-  },
-  {
-    "date": "2025-10-03",
-    "in": 19000,
-    "out": 0,
-    "desc": "USAMA Wa Lilis"
-  },
-  {
-    "date": "2025-10-04",
-    "in": 38000,
-    "out": 0,
-    "desc": "USAMA Muhamad Hanif Muhsin"
-  },
-  {
-    "date": "2025-10-04",
-    "in": 19000,
-    "out": 0,
-    "desc": "USAMA Rikma Parlina"
-  },
-  {
-    "date": "2025-10-05",
-    "in": 100000,
-    "out": 0,
-    "desc": "Bapak Asep Salaman P (Manaqib At - Taqwa)"
-  },
-  {
-    "date": "2025-10-07",
-    "in": 200000,
-    "out": 0,
-    "desc": "Hj. Imas Hasanah (Dana Manaqib)"
-  },
-  {
-    "date": "2025-10-07",
-    "in": 70000,
-    "out": 0,
-    "desc": "Hj. Imas Hasanah (Ibu Rella)"
-  },
+
   {
     "date": "2025-10-07",
     "in": 50000,
@@ -317,5 +266,11 @@
     "in": 30000,
     "out": 0,
     "desc": "Hj. Imas Hasanah (Ceu Ati)"
+  },
+  {
+    "date": "2025-10-10",
+    "in": 100000,
+    "out": 0,
+    "desc": "Hj. Iis Mintarsih (Infaq Guru Ngaji)"
   }
 ]
