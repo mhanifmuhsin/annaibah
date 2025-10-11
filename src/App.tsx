@@ -117,24 +117,7 @@ function App() {
       })(),
       color: "#3b82f6",
     }, // blue
-    {
-      id: "wakaf_annaibah",
-      name: "Lainnya",
-      value: (() => {
-        const filtered = dataKasLainnya.filter(
-          (item) =>
-            new Date(item.date).getMonth() === selectedMonth &&
-            new Date(item.date).getFullYear() === selectedYear
-        );
-        return filtered.length
-          ? filtered[filtered.length - 1].saldo.toLocaleString("id-ID", {
-              style: "currency",
-              currency: "IDR",
-            })
-          : "Rp 0,00";
-      })(),
-      color: "#6b7280",
-    }, // gray
+    // gray
     {
       id: "at_taqwa",
       name: "At-Taqwa",
@@ -205,7 +188,25 @@ function App() {
             })
           : "Rp 0,00";
       })(),
-      color: "green",
+      color: "red",
+    },
+    {
+      id: "wakaf_annaibah",
+      name: "Lainnya",
+      value: (() => {
+        const filtered = dataKasLainnya.filter(
+          (item) =>
+            new Date(item.date).getMonth() === selectedMonth &&
+            new Date(item.date).getFullYear() === selectedYear
+        );
+        return filtered.length
+          ? filtered[filtered.length - 1].saldo.toLocaleString("id-ID", {
+              style: "currency",
+              currency: "IDR",
+            })
+          : "Rp 0,00";
+      })(),
+      color: "#6b7280",
     },
   ];
 

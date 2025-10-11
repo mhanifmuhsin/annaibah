@@ -64,7 +64,7 @@ export default function BottomNavigation({
             ))}
 
             {/* Floating button between An-Naibah and Kencleng */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 -top-6">
+            <div className="absolute left-1/2 transform -translate-x-1/2 -top-8">
               <button
                 className="bg-red-600 text-white rounded-full p-3 shadow-lg hover:bg-orange-500 transition-colors"
                 onClick={() => {
@@ -79,7 +79,10 @@ export default function BottomNavigation({
               <button
                 key={value}
                 className={getClass(value)}
-                onClick={() => setState(value)}
+                onClick={() => {
+                  setState(value);
+                  setShowFab(false);
+                }}
               >
                 <Icon />
                 <span>{label}</span>
@@ -91,7 +94,7 @@ export default function BottomNavigation({
 
       {/* Floating Action Button */}
       {showFab && (
-        <div className="fixed bottom-[95px] left-4 z-50 flex gap-2">
+        <div className="fixed left-1/2 bottom-[100px] z-50 grid grid-cols-4 mx-auto w-full max-w-md px-4 gap-2 -translate-x-1/2 bg-white/30 backdrop-blur-md shadow-lg rounded-xl py-3">
           {ACTION_BUTTONS.map(({ label, value }) => (
             <button
               className="bg-blue-600 text-[10px] text-white rounded-full p-2 shadow-lg hover:bg-orange-500 transition-colors"
