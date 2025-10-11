@@ -22,5 +22,11 @@
     "in": 100000,
     "out": 0,
     "desc": "Hj. Iis Mintarsih"
+  },
+  {
+    "date": "2025-10-11",
+    "in": 0,
+    "out": 100000,
+    "desc": "Manaqib Al-Maslul"
   }
 ]
