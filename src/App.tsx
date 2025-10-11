@@ -753,7 +753,9 @@ function App() {
                         style: "currency",
                         currency: "IDR",
                       })}
-                    categories={categories.filter((cat) => cat.id === "usama")}
+                    categories={categories.filter(
+                      (cat) => cat.id === "ibu_rella"
+                    )}
                   />
                 </section>
                 <section className="m-2">
