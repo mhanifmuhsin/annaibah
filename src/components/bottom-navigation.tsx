@@ -3,6 +3,7 @@ import {
   HandCoinsIcon,
   HomeIcon,
   PackageIcon,
+  PackageOpenIcon,
   TowerControlIcon,
 } from "lucide-react";
 import React from "react";
@@ -20,10 +21,10 @@ const LANDING_NAV = [
 
 const ACTION_BUTTONS = [
   { label: "At-Taqwa", value: "at_taqwa" },
-  { label: "Wakaf", value: "wakaf" },
-  { label: "USAMA", value: "usama" },
   { label: "Ibu Rella", value: "ibu_rella" },
-  { label: "Lainnya", value: "wakaf_annaibah" },
+  { label: "USAMA", value: "usama" },
+  { label: "Wakaf", value: "wakaf" },
+  // { label: "Lainnya", value: "wakaf_annaibah" },
 ];
 
 export default function BottomNavigation({
@@ -50,16 +51,35 @@ export default function BottomNavigation({
     <>
       <nav className="fixed bottom-0 left-0 z-50 flex w-full justify-center">
         <div className="w-full max-w-md bg-white/30 backdrop-blur-md shadow-md ">
-          <div className="mx-auto flex w-full max-w-md justify-around border-t py-2">
-            {LANDING_NAV.map(({ value, label, icon: Icon }) => (
+          <div className="mx-auto flex w-full max-w-md justify-around border-t py-2 relative">
+            {LANDING_NAV.slice(0, 2).map(({ value, label, icon: Icon }) => (
               <button
                 key={value}
                 className={getClass(value)}
-                onClick={() =>
-                  value === "wakaf_annaibah"
-                    ? handleLainnyaClick()
-                    : setState(value)
-                }
+                onClick={() => setState(value)}
+              >
+                <Icon />
+                <span>{label}</span>
+              </button>
+            ))}
+
+            {/* Floating button between An-Naibah and Kencleng */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 -top-6">
+              <button
+                className="bg-red-600 text-white rounded-full p-3 shadow-lg hover:bg-orange-500 transition-colors"
+                onClick={() => {
+                  handleLainnyaClick();
+                }}
+              >
+                <PackageOpenIcon size={20} />
+              </button>
+            </div>
+
+            {LANDING_NAV.slice(2).map(({ value, label, icon: Icon }) => (
+              <button
+                key={value}
+                className={getClass(value)}
+                onClick={() => setState(value)}
               >
                 <Icon />
                 <span>{label}</span>
@@ -71,10 +91,10 @@ export default function BottomNavigation({
 
       {/* Floating Action Button */}
       {showFab && (
-        <div className="fixed bottom-20 right-4 z-50 flex flex-col space-y-4">
+        <div className="fixed bottom-[95px] left-4 z-50 flex gap-2">
           {ACTION_BUTTONS.map(({ label, value }) => (
             <button
-              className="bg-red-600 text-xs text-white rounded-full p-2 shadow-lg hover:bg-orange-500 transition-colors"
+              className="bg-blue-600 text-[10px] text-white rounded-full p-2 shadow-lg hover:bg-orange-500 transition-colors"
               onClick={() => {
                 // Add your action here
                 setState(value);
@@ -84,6 +104,30 @@ export default function BottomNavigation({
               {label}
             </button>
           ))}
+          <button
+            className="bg-green-600 text-[10px] text-white rounded-full p-2 shadow-lg hover:bg-orange-500 transition-colors"
+            onClick={() => {
+              // Add your action here
+
+              const url = `https://wa.me/6281916511138?text=${encodeURIComponent(
+                "Halo, saya ingin memberikan masukan."
+              )}`;
+              window.open(url, "_blank");
+            }}
+          >
+            {/* <PlusIcon size={24} /> */}
+            Masukan
+          </button>
+          <button
+            className="bg-red-600 text-[10px] text-white rounded-full p-2 shadow-lg hover:bg-orange-500 transition-colors"
+            onClick={() => {
+              // Add your action here
+              setShowFab(false);
+            }}
+          >
+            {/* <PlusIcon size={24} /> */}
+            Tutup
+          </button>
         </div>
       )}
     </>

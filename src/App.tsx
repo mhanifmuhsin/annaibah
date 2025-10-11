@@ -1,21 +1,20 @@
 // import "./App.css";
 
 import { ArrowUpFromDot, ConstructionIcon, GlassWaterIcon } from "lucide-react";
+import React, { useEffect } from "react";
+import ActivityCard from "./components/ActivityCard";
 import BottomNavigation from "./components/bottom-navigation";
 import IncomeCard from "./components/IncomeCard";
-import ProgramCard from "./components/ProgramCard";
-import WhatsAppButton from "./components/WhatsAppButton";
-import React, { useEffect } from "react";
 import InOut from "./components/InOut";
+import ProgramCard from "./components/ProgramCard";
 import kasAnnaibahData from "./data/kas_annaibah.json";
+import kasAttaqwa from "./data/kas_attaqwa.json";
+import kasIbuRella from "./data/kas_ibu_rella.json";
 import kasKenclengData from "./data/kas_kencleng.json";
 import kasLainnyaData from "./data/kas_lainnya.json";
-import kasAttaqwa from "./data/kas_attaqwa.json";
 import kasUsama from "./data/kas_usama.json";
-import kasIbuRella from "./data/kas_ibu_rella.json";
 import kasWakaf from "./data/kas_wakaf.json";
 import { hitungSaldo } from "./utils";
-import ActivityCard from "./components/ActivityCard";
 
 const spendItems = [
   {
@@ -831,13 +830,13 @@ function App() {
               </>
             )}
 
-            <section className="flex justify-center p-4">
+            {/* <section className="flex justify-center p-4">
               <WhatsAppButton
                 phone="6281916511138"
                 message="Halo, saya ingin memberikan masukan."
                 title="Berikan Masukan"
               />
-            </section>
+            </section> */}
             <button
               className={`fixed bottom-28 right-2 z-30 bg-red-600  text-white rounded-full p-2 shadow-lg transition-all ${
                 visible ? "opacity-100 scale-100" : "opacity-0 scale-0"
