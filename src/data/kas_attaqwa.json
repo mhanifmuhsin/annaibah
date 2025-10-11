@@ -28,5 +28,35 @@
     "in": 0,
     "out": 100000,
     "desc": "Manaqib Al-Maslul"
+  },
+  {
+    "date": "2025-10-11",
+    "in": 0,
+    "out": 250000,
+    "desc": "Personil Manaqib At-Taqwa"
+  },
+  {
+    "date": "2025-10-11",
+    "in": 0,
+    "out": 20000,
+    "desc": "Khotaman Manaqib At-Taqwa"
+  },
+  {
+    "date": "2025-10-11",
+    "in": 0,
+    "out": 30000,
+    "desc": "Binyai Manaqib At-Taqwa"
+  },
+  {
+    "date": "2025-10-11",
+    "in": 0,
+    "out": 20000,
+    "desc": "Ade Dayeuhkolot Manaqib At-Taqwa"
+  },
+  {
+    "date": "2025-10-11",
+    "in": 0,
+    "out": 60000,
+    "desc": "Biaya tidak terduga Manaqib At-Taqwa"
   }
 ]

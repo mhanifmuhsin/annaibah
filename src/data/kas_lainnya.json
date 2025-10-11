@@ -272,5 +272,17 @@
     "in": 100000,
     "out": 0,
     "desc": "Hj. Iis Mintarsih (Infaq Guru Ngaji)"
+  },
+  {
+    "date": "2025-10-11",
+    "in": 0,
+    "out": 100000,
+    "desc": "Infaq Guru Ngaji"
+  },
+  {
+    "date": "2025-10-11",
+    "in": 0,
+    "out": 30000,
+    "desc": "Ceu Ati"
   }
 ]
