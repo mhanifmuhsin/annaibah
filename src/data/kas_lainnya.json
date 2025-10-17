@@ -284,5 +284,17 @@
     "in": 0,
     "out": 30000,
     "desc": "Ceu Ati"
+  },
+  {
+    "date": "2025-10-16",
+    "in": 100000,
+    "out": 0,
+    "desc": "Hj. Imas Hasanah (Titip Manaqib Jalak Harupat)"
+  },
+  {
+    "date": "2025-10-16",
+    "in": 0,
+    "out": 100000,
+    "desc": "Kiyai Ade Wawan, Hj. Imas Hasanah (Titip Manaqib Jalak Harupat)"
   }
 ]

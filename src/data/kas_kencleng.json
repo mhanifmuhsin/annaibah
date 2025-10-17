@@ -52,5 +52,35 @@
     "in": 0,
     "out": 100000,
     "desc": "H. Agus Sopandi (Imam Mesjid) ke Kas Lainnya"
+  },
+  {
+    "date": "2025-10-03",
+    "in": 330000,
+    "out": 0,
+    "desc": "Dari Kencleng"
+  },
+  {
+    "date": "2025-10-17",
+    "in": 0,
+    "out": 170000,
+    "desc": "Pembayaran PBB Tanah Wakaf"
+  },
+  {
+    "date": "2025-10-17",
+    "in": 0,
+    "out": 55000,
+    "desc": "Spanduk Manaqib Jalak Harupat"
+  },
+  {
+    "date": "2025-10-17",
+    "in": 0,
+    "out": 105000,
+    "desc": "Bendera Merah Putih 7 Pcs"
+  },
+  {
+    "date": "2025-10-17",
+    "in": 0,
+    "out": 75000,
+    "desc": "Air Sirraya Botol 1 Dus"
   }
 ]
