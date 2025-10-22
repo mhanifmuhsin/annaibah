@@ -58,5 +58,11 @@
     "in": 0,
     "out": 60000,
     "desc": "Biaya tidak terduga Manaqib At-Taqwa"
+  },
+  {
+    "date": "2025-10-20",
+    "in": 100000,
+    "out": 0,
+    "desc": "Sisa Manaqib At-Taqwa"
   }
 ]
