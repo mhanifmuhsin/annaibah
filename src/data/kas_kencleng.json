@@ -82,5 +82,17 @@
     "in": 0,
     "out": 75000,
     "desc": "Air Sirraya Botol 1 Dus"
+  },
+  {
+    "date": "2025-10-25",
+    "in": 154000,
+    "out": 0,
+    "desc": "Dari Kencleng"
+  },
+  {
+    "date": "2025-10-25",
+    "in": 0,
+    "out": 150000,
+    "desc": "Tabaruk Kitab Fadhoilus Shuhur"
   }
 ]
