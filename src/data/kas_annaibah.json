@@ -88,5 +88,83 @@
     "in": 150000,
     "out": 0,
     "desc": "Kencleng (Tabaruk Kitab Fadhoilus Shuhur)"
+  },
+  {
+    "date": "2025-10-25",
+    "in": 200000,
+    "out": 0,
+    "desc": "Teh Reni"
+  },
+  {
+    "date": "2025-10-25",
+    "in": 0,
+    "out": 125000,
+    "desc": "Manaqib Pembawa Acara"
+  },
+  {
+    "date": "2025-10-25",
+    "in": 0,
+    "out": 80000,
+    "desc": "Manaqib Pembacaan Al-Qur'an"
+  },
+  {
+    "date": "2025-10-25",
+    "in": 0,
+    "out": 80000,
+    "desc": "Manaqib Pembacaan Sholawat"
+  },
+  {
+    "date": "2025-10-25",
+    "in": 0,
+    "out": 80000,
+    "desc": "Manaqib Tanbih + Pancasila"
+  },
+  {
+    "date": "2025-10-25",
+    "in": 0,
+    "out": 80000,
+    "desc": "Manaqib Tawasul"
+  },
+  {
+    "date": "2025-10-25",
+    "in": 0,
+    "out": 80000,
+    "desc": "Manaqib Manqobah"
+  },
+  {
+    "date": "2025-10-25",
+    "in": 0,
+    "out": 150000,
+    "desc": "Manaqib Tabaruk Kitab Fadhoilus Shuhur"
+  },
+  {
+    "date": "2025-10-25",
+    "in": 0,
+    "out": 700000,
+    "desc": "Manaqib Khidmat Ilmiah"
+  },
+  {
+    "date": "2025-10-25",
+    "in": 0,
+    "out": 25000,
+    "desc": "Manaqib Khotaman"
+  },
+  {
+    "date": "2025-10-25",
+    "in": 0,
+    "out": 25000,
+    "desc": "Manaqib Mang Ade Dayeuhkolot"
+  },
+  {
+    "date": "2025-10-25",
+    "in": 0,
+    "out": 25000,
+    "desc": "Manaqib Mang Sapan"
+  },
+  {
+    "date": "2025-10-25",
+    "in": 0,
+    "out": 40000,
+    "desc": "Manaqib Mang Enting"
   }
 ]
