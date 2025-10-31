@@ -142,5 +142,17 @@
     "in": 0,
     "out": 807000,
     "desc": "USAMA Bulan Oktober 2025"
+  },
+  {
+    "date": "2025-11-01",
+    "in": 38000,
+    "out": 0,
+    "desc": "USAMA Muhamad Hanif Muhsin"
+  },
+  {
+    "date": "2025-11-01",
+    "in": 38000,
+    "out": 0,
+    "desc": "USAMA Rikma Parlina"
   }
 ]

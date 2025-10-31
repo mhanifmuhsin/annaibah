@@ -314,5 +314,11 @@
     "in": 0,
     "out": 80000,
     "desc": "Pengawal KH. Suhudul Anwar"
+  },
+  {
+    "date": "2025-11-01",
+    "in": 50000,
+    "out": 0,
+    "desc": "Muhamad Hanif Muhsin (Marbot)"
   }
 ]

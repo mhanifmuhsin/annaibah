@@ -166,5 +166,11 @@
     "in": 0,
     "out": 40000,
     "desc": "Manaqib Mang Enting"
+  },
+  {
+    "date": "2025-11-01",
+    "in": 240000,
+    "out": 0,
+    "desc": "Muhamad Hanif Muhsin"
   }
 ]
