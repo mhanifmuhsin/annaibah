@@ -112,5 +112,11 @@
     "in": 50000,
     "out": 0,
     "desc": "Dari Kencleng"
+  },
+  {
+    "date": "2025-11-08",
+    "in": 0,
+    "out": 50000,
+    "desc": "Untuk Marbot"
   }
 ]
