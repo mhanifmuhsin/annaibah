@@ -151,8 +151,14 @@
   },
   {
     "date": "2025-11-01",
-    "in": 38000,
+    "in": 19000,
     "out": 0,
     "desc": "USAMA Rikma Parlina"
+  },
+  {
+    "date": "2025-11-06",
+    "in": 38000,
+    "out": 0,
+    "desc": "USAMA H. Agus Sopandi"
   }
 ]
