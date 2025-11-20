@@ -370,15 +370,33 @@
     "desc": "Manaqib Al-Maslul"
   },
   {
-    "date": "2025-11-08",
+    "date": "2025-11-18",
     "in": 100000,
     "out": 0,
     "desc": "Hj. Iis Mintarsih (Guru Ngaji)"
   },
   {
-    "date": "2025-11-08",
+    "date": "2025-11-18",
     "in": 50000,
     "out": 0,
     "desc": "Hj. Iis Mintarsih (Titip Kalender)"
+  },
+  {
+    "date": "2025-11-20",
+    "in": 0,
+    "out": 50000,
+    "desc": "Hj. Iis Mintarsih (Bayar Kalender)"
+  },
+  {
+    "date": "2025-11-20",
+    "in": 0,
+    "out": 100000,
+    "desc": "Hj. Iis Mintarsih (Guru Ngaji)"
+  },
+  {
+    "date": "2025-11-20",
+    "in": 0,
+    "out": 30000,
+    "desc": "Ceu Ati"
   }
 ]
