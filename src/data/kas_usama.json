@@ -262,5 +262,11 @@
     "in": 38000,
     "out": 0,
     "desc": "USAMA Kevin"
+  },
+  {
+    "date": "2025-11-18",
+    "in": 0,
+    "out": 750000,
+    "desc": "USAMA November 2025"
   }
 ]

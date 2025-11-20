@@ -368,5 +368,17 @@
     "in": 0,
     "out": 100000,
     "desc": "Manaqib Al-Maslul"
+  },
+  {
+    "date": "2025-11-08",
+    "in": 100000,
+    "out": 0,
+    "desc": "Hj. Iis Mintarsih (Guru Ngaji)"
+  },
+  {
+    "date": "2025-11-08",
+    "in": 50000,
+    "out": 0,
+    "desc": "Hj. Iis Mintarsih (Titip Kalender)"
   }
 ]
