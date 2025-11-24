@@ -9,7 +9,7 @@ import InOut from "./components/InOut";
 import ProgramCard from "./components/ProgramCard";
 import kasAnnaibahData from "./data/kas_annaibah.json";
 import kasAttaqwa from "./data/kas_attaqwa.json";
-import kasIbuRella from "./data/kas_ibu_rella.json";
+import kasRenovasi from "./data/kas_renovasi.json";
 import kasKenclengData from "./data/kas_kencleng.json";
 import kasLainnyaData from "./data/kas_lainnya.json";
 import kasUsama from "./data/kas_usama.json";
@@ -57,7 +57,7 @@ function App() {
   const dataKasLainnya = hitungSaldo(kasLainnyaData);
   const dataKasAttaqwa = hitungSaldo(kasAttaqwa);
   const dataKasUsama = hitungSaldo(kasUsama);
-  const dataKasIbuRella = hitungSaldo(kasIbuRella);
+  const dataKasRenovasi = hitungSaldo(kasRenovasi);
   const dataKasWakaf = hitungSaldo(kasWakaf);
   const [visible, setVisible] = React.useState(false);
 
@@ -155,10 +155,10 @@ function App() {
       color: "purple",
     },
     {
-      id: "ibu_rella",
-      name: "Ibu Rella",
+      id: "renovasi",
+      name: "Renovasi",
       value: (() => {
-        const filtered = dataKasIbuRella.filter(
+        const filtered = dataKasRenovasi.filter(
           (item) =>
             new Date(item.date).getMonth() === selectedMonth &&
             new Date(item.date).getFullYear() === selectedYear
@@ -340,7 +340,7 @@ function App() {
                             new Date(item.date).getFullYear() === selectedYear
                         )
                         .reduce((acc, item) => acc + item.in, 0) +
-                      dataKasIbuRella
+                      dataKasRenovasi
                         .filter(
                           (item) =>
                             new Date(item.date).getMonth() === selectedMonth &&
@@ -387,7 +387,7 @@ function App() {
                             new Date(item.date).getFullYear() === selectedYear
                         )
                         .reduce((acc, item) => acc + item.out, 0) +
-                      dataKasIbuRella
+                      dataKasRenovasi
                         .filter(
                           (item) =>
                             new Date(item.date).getMonth() === selectedMonth &&
@@ -719,11 +719,11 @@ function App() {
               </>
             )}
 
-            {stateNavigation === "ibu_rella" && (
+            {stateNavigation === "renovasi" && (
               <>
                 <section className="mx-2 pt-2">
                   <IncomeCard
-                    title="Ibu Rella"
+                    title="Renovasi"
                     date={new Date(selectedYear, selectedMonth).toLocaleString(
                       "id-ID",
                       {
@@ -731,7 +731,7 @@ function App() {
                         year: "numeric",
                       }
                     )}
-                    total={dataKasIbuRella
+                    total={dataKasRenovasi
                       .filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
@@ -742,7 +742,7 @@ function App() {
                         style: "currency",
                         currency: "IDR",
                       })}
-                    totalExpense={dataKasIbuRella
+                    totalExpense={dataKasRenovasi
                       .filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
@@ -754,7 +754,7 @@ function App() {
                         currency: "IDR",
                       })}
                     categories={categories.filter(
-                      (cat) => cat.id === "ibu_rella"
+                      (cat) => cat.id === "renovasi"
                     )}
                   />
                 </section>
@@ -765,7 +765,7 @@ function App() {
                       year: "numeric",
                     })}
                     items={searchByDesc(
-                      dataKasIbuRella.filter(
+                      dataKasRenovasi.filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
                           new Date(item.date).getFullYear() === selectedYear

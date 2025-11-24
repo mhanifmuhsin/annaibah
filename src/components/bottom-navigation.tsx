@@ -21,7 +21,7 @@ const LANDING_NAV = [
 
 const ACTION_BUTTONS = [
   { label: "At-Taqwa", value: "at_taqwa" },
-  { label: "Ibu Rella", value: "ibu_rella" },
+  { label: "Renovasi", value: "renovasi" },
   { label: "USAMA", value: "usama" },
   { label: "Wakaf", value: "wakaf" },
   // { label: "Lainnya", value: "wakaf_annaibah" },
@@ -42,8 +42,6 @@ export default function BottomNavigation({
     }`;
 
   const handleLainnyaClick = () => {
-    // setState("wakaf_annaibah");
-    console.log("masuk sini");
     setShowFab(!showFab);
   };
 
