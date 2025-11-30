@@ -196,5 +196,23 @@
     "in": 200000,
     "out": 0,
     "desc": "Teh Reni"
+  },
+  {
+    "date": "2025-11-29",
+    "in": 150000,
+    "out": 0,
+    "desc": "Dari Kencleng (Tabaruk Kitab Fadhoilus Shuhur)"
+  },
+  {
+    "date": "2025-11-29",
+    "in": 100000,
+    "out": 0,
+    "desc": "A Wawan"
+  },
+  {
+    "date": "2025-11-29",
+    "in": 0,
+    "out": 870000,
+    "desc": "Manaqib"
   }
 ]
