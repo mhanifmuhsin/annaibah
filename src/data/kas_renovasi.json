@@ -16,5 +16,17 @@
     "in": 100000,
     "out": 0,
     "desc": "Candra (Madrasah - trf Seabank)"
+  },
+  {
+    "date": "2025-12-1",
+    "in": 200000,
+    "out": 0,
+    "desc": "Muhamad Hanif Muhsin"
+  },
+  {
+    "date": "2025-12-1",
+    "in": 0,
+    "out": 200000,
+    "desc": "Tambahan Upah Kerja Hari Minggu"
   }
 ]

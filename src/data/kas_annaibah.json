@@ -214,5 +214,17 @@
     "in": 0,
     "out": 870000,
     "desc": "Manaqib"
+  },
+  {
+    "date": "2025-12-02",
+    "in": 250000,
+    "out": 0,
+    "desc": "Muhamad Hanif Muhsin"
+  },
+  {
+    "date": "2025-12-2",
+    "in": 80000,
+    "out": 0,
+    "desc": "Ahmad Faishal"
   }
 ]

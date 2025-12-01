@@ -268,5 +268,17 @@
     "in": 0,
     "out": 750000,
     "desc": "USAMA November 2025"
+  },
+  {
+    "date": "2025-12-02",
+    "in": 38000,
+    "out": 0,
+    "desc": "USAMA Muhamad Hanif Muhsin"
+  },
+  {
+    "date": "2025-12-02",
+    "in": 19000,
+    "out": 0,
+    "desc": "USAMA Rikma Parlina"
   }
 ]

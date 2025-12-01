@@ -398,5 +398,11 @@
     "in": 0,
     "out": 30000,
     "desc": "Ceu Ati"
+  },
+  {
+    "date": "2025-12-02",
+    "in": 50000,
+    "out": 0,
+    "desc": "Muhamad Hanif Muhsin (Marbot)"
   }
 ]
