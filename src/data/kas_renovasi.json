@@ -28,5 +28,11 @@
     "in": 0,
     "out": 200000,
     "desc": "Tambahan Upah Kerja Hari Minggu"
+  },
+  {
+    "date": "2025-12-2",
+    "in": 300000,
+    "out": 0,
+    "desc": "A Denny (Madrasah - trf Seabank)"
   }
 ]
