@@ -52,5 +52,11 @@
     "in": 0,
     "out": 58000,
     "desc": "Peralatan Cat"
+  },
+  {
+    "date": "2025-12-20",
+    "in": 0,
+    "out": 100000,
+    "desc": "Buruh A Sigit nge cat"
   }
 ]
