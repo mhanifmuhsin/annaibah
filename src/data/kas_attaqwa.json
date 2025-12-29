@@ -124,5 +124,11 @@
     "in": 0,
     "out": 380000,
     "desc": "Manaqib At-Taqwa"
+  },
+  {
+    "date": "2025-12-29",
+    "in": 80000,
+    "out": 0,
+    "desc": "Sisa Manaqib At-Taqwa"
   }
 ]
