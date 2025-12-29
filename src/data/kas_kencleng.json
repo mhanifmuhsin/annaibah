@@ -174,9 +174,21 @@
     "desc": "Manaqib Pak Bambang"
   },
   {
+    "date": "2025-12-26",
+    "in": 0,
+    "out": 175000,
+    "desc": "5 Dus Air Sirraya Gelas"
+  },
+  {
     "date": "2025-12-27",
     "in": 265000,
     "out": 0,
     "desc": "Dari Kencleng"
+  },
+  {
+    "date": "2025-12-27",
+    "in": 110000,
+    "out": 0,
+    "desc": "Pembelian stok air sirraya gelas 1 Dus, Botol 2 Dus"
   }
 ]
