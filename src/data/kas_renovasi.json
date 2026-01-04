@@ -58,5 +58,11 @@
     "in": 0,
     "out": 100000,
     "desc": "Buruh A Sigit nge cat"
+  },
+  {
+    "date": "2026-01-04",
+    "in": 50000,
+    "out": 0,
+    "desc": "Muhamad Hanif Muhsin"
   }
 ]

@@ -488,5 +488,23 @@
     "in": 0,
     "out": 50000,
     "desc": "Manaqib Pak Bambang"
+  },
+  {
+    "date": "2026-01-01",
+    "in": 0,
+    "out": 150000,
+    "desc": "Manaqib Al-Maslul"
+  },
+  {
+    "date": "2026-01-02",
+    "in": 100000,
+    "out": 0,
+    "desc": "Hj. Iis Mintarsih (Guru Ngaji)"
+  },
+  {
+    "date": "2026-01-04",
+    "in": 50000,
+    "out": 0,
+    "desc": "Muhamad Hanif Muhsin (Marbot)"
   }
 ]

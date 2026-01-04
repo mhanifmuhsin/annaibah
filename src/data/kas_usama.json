@@ -400,5 +400,23 @@
     "in": 0,
     "out": 827000,
     "desc": "USAMA Desember 2025"
+  },
+  {
+    "date": "2026-01-04",
+    "in": 38000,
+    "out": 0,
+    "desc": "USAMA Muhamad Hanif Muhsin"
+  },
+  {
+    "date": "2026-01-04",
+    "in": 19000,
+    "out": 0,
+    "desc": "USAMA Rikma Parlina"
+  },
+  {
+    "date": "2026-01-04",
+    "in": 38000,
+    "out": 0,
+    "desc": "USAMA Teh Indri"
   }
 ]

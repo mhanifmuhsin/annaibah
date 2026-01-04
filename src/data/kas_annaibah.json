@@ -250,5 +250,17 @@
     "in": 0,
     "out": 1115000,
     "desc": "Manaqib"
+  },
+  {
+    "date": "2026-01-02",
+    "in": 300000,
+    "out": 0,
+    "desc": "Hj. Iis Mintarsih"
+  },
+  {
+    "date": "2026-01-04",
+    "in": 240000,
+    "out": 0,
+    "desc": "Muhamad Hanif Muhsin"
   }
 ]
