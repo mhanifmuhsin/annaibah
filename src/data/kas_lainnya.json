@@ -539,6 +539,12 @@
   },
   {
     "date": "2026-01-14",
+    "in": 50000,
+    "out": 0,
+    "desc": "Hj. Noneng Sumiaty (Manaqib Pak Bambang)"
+  },
+  {
+    "date": "2026-01-14",
     "in": 0,
     "out": 39000,
     "desc": "BPJS Bapak Agus Sopandi"
