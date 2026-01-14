@@ -190,5 +190,17 @@
     "in": 110000,
     "out": 0,
     "desc": "Pembelian stok air sirraya gelas 1 Dus, Botol 2 Dus (Hj. Noneng Sumiaty)"
+  },
+  {
+    "date": "2026-01-12",
+    "in": 500000,
+    "out": 0,
+    "desc": "Dari Kencleng"
+  },
+  {
+    "date": "2026-01-14",
+    "in": 0,
+    "out": 50000,
+    "desc": "Untuk Marbot"
   }
 ]
