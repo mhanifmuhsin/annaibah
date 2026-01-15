@@ -560,5 +560,17 @@
     "in": 50000,
     "out": 0,
     "desc": "Dari Kencleng untuk (Marbot)"
+  },
+  {
+    "date": "2026-01-15",
+    "in": 0,
+    "out": 30000,
+    "desc": "Ceu Ati"
+  },
+  {
+    "date": "2026-01-15",
+    "in": 0,
+    "out": 100000,
+    "desc": "Infaq Guru Ngaji"
   }
 ]
