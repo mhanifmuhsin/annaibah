@@ -82,5 +82,11 @@
     "in": 0,
     "out": 500000,
     "desc": "Belanja Barang (Mang Tari)"
+  },
+  {
+    "date": "2026-01-16",
+    "in": 0,
+    "out": 120000,
+    "desc": "Buruh A Sigit nge cat"
   }
 ]
