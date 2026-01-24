@@ -532,5 +532,11 @@
     "in": 0,
     "out": 750000,
     "desc": "USAMA Januari 2026"
+  },
+  {
+    "date": "2026-01-24",
+    "in": 38000,
+    "out": 0,
+    "desc": "USAMA Februari 2026"
   }
 ]
