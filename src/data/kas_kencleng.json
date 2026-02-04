@@ -244,5 +244,23 @@
     "in": 0,
     "out": 110000,
     "desc": "Air Sirraya Gelas 3 Dus"
+  },
+  {
+    "date": "2026-02-02",
+    "in": 0,
+    "out": 100000,
+    "desc": "Imam Nisfu Sya'ban (Ust Arif)"
+  },
+  {
+    "date": "2026-02-04",
+    "in": 354000,
+    "out": 0,
+    "desc": "Kencleng"
+  },
+  {
+    "date": "2026-02-04",
+    "in": 0,
+    "out": 150000,
+    "desc": "Kebutuhan Rehab Madrasah"
   }
 ]

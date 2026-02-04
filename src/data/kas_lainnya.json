@@ -578,5 +578,11 @@
     "in": 0,
     "out": 50000,
     "desc": "Hj. Noneng Sumiaty (Manaqib Pak Bambang)"
+  },
+  {
+    "date": "2026-02-04",
+    "in": 50000,
+    "out": 0,
+    "desc": "Muhamad Hanif Muhsin (Marbot)"
   }
 ]

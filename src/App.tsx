@@ -1,54 +1,51 @@
 // import "./App.css";
 
-import { ArrowUpFromDot, ConstructionIcon, GlassWaterIcon } from "lucide-react";
+import {
+  ArrowUpFromDot,
+  Construction,
+  ConstructionIcon,
+  GlassWaterIcon,
+} from "lucide-react";
 import React, { useEffect } from "react";
-import ActivityCard from "./components/ActivityCard";
 import BottomNavigation from "./components/bottom-navigation";
 import IncomeCard from "./components/IncomeCard";
 import InOut from "./components/InOut";
 import ProgramCard from "./components/ProgramCard";
 import kasAnnaibahData from "./data/kas_annaibah.json";
 import kasAttaqwa from "./data/kas_attaqwa.json";
-import kasRenovasi from "./data/kas_renovasi.json";
 import kasKenclengData from "./data/kas_kencleng.json";
 import kasLainnyaData from "./data/kas_lainnya.json";
+import kasRenovasi from "./data/kas_renovasi.json";
 import kasUsama from "./data/kas_usama.json";
 import kasWakaf from "./data/kas_wakaf.json";
 import { hitungSaldo } from "./utils";
 
 const spendItems = [
   {
-    icon: <GlassWaterIcon className="h-4 w-4 text-gray-600" />,
-    title: "Sirraya Manaqib An-Naibah",
-    subtitle: "3 Dus Botol",
-    amount: "Rp 225.000,00",
-    date: "75.000,00/Dus",
+    icon: <Construction className="h-4 w-4 text-gray-600" />,
+    title: "Pembersihan Makam Keluarga",
+    subtitle: "Teh Euis",
+    amount: "Rp 50.000.00",
+    date: "Per Bulan",
   },
   {
     icon: <GlassWaterIcon className="h-4 w-4 text-gray-600" />,
-    title: "Sirraya Manaqib At-Taqwa + Ibu Rella",
-    subtitle: "3 Dus Gelas",
-    amount: "Rp 105.000,00",
-    date: "35.500,00/Dus",
+    title: "Sirraya Manaqib An-Naibah + At-Taqwa + Ibu Rella",
+    subtitle: "4 Dus Gelas",
+    amount: "Rp 150.000,00",
+    date: "37.500,00/Dus",
   },
 ];
 
-const activityItems = [
-  {
-    icon: <ConstructionIcon className="h-4 w-4 text-gray-600" />,
-    title: "Perbaikan WC Mampet ",
-    subtitle: "Mang Ica + Hanif + Winardi",
-    amount: 30000,
-    date: "2025-09-20",
-  },
-  {
-    icon: <ConstructionIcon className="h-4 w-4 text-gray-600" />,
-    title: "Pembersihan Makam Keluarga",
-    subtitle: "Mang Ica + Konsumsi",
-    amount: 150000,
-    date: "2025-09-20",
-  },
-];
+// const activityItems = [
+//   {
+//     icon: <ConstructionIcon className="h-4 w-4 text-gray-600" />,
+//     title: "Pembersihan Makam Keluarga",
+//     subtitle: "Teh Euis",
+//     amount: 150000,
+//     date: "2025-09-20",
+//   },
+// ];
 
 function App() {
   const [stateNavigation, setStateNavigation] = React.useState("home");
@@ -415,13 +412,13 @@ function App() {
                     categories={categories}
                   />
                 </section>
-                <section className="m-2">
+                {/* <section className="m-2">
                   <ActivityCard
                     title="Kegiatan"
                     period="2025"
                     items={activityItems}
                   />
-                </section>
+                </section> */}
                 <section className="m-2">
                   <ProgramCard
                     title="Program Pembiasaan"
