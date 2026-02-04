@@ -1,11 +1,6 @@
 // import "./App.css";
 
-import {
-  ArrowUpFromDot,
-  Construction,
-  ConstructionIcon,
-  GlassWaterIcon,
-} from "lucide-react";
+import { ArrowUpFromDot, Construction, GlassWaterIcon } from "lucide-react";
 import React, { useEffect } from "react";
 import BottomNavigation from "./components/bottom-navigation";
 import IncomeCard from "./components/IncomeCard";
