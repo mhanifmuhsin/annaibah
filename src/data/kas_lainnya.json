@@ -602,5 +602,35 @@
     "in": 0,
     "out": 150000,
     "desc": "Manaqib Al-Maslul"
+  },
+  {
+    "date": "2026-02-10",
+    "in": 50000,
+    "out": 0,
+    "desc": "Hj. Imas Hasanah (Marbot)"
+  },
+  {
+    "date": "2026-02-10",
+    "in": 30000,
+    "out": 0,
+    "desc": "Hj. Imas Hasanah (Ceu Ati)"
+  },
+  {
+    "date": "2026-02-10",
+    "in": 100000,
+    "out": 0,
+    "desc": "Hj. Imas Hasanah Manaqib Al-Maslul"
+  },
+  {
+    "date": "2026-02-13",
+    "in": 0,
+    "out": 39000,
+    "desc": "BPJS Bapak Agus Sopandi"
+  },
+  {
+    "date": "2026-02-13",
+    "in": 0,
+    "out": 161000,
+    "desc": "H. Agus Sopandi (sebagai imam mesjid)"
   }
 ]
