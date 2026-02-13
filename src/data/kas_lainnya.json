@@ -593,8 +593,8 @@
   },
   {
     "date": "2026-02-7",
-    "in": 0,
-    "out": 50000,
+    "in": 50000,
+    "out": 0,
     "desc": "Hj. Noneng Sumiaty (Marbot)"
   },
   {
@@ -620,6 +620,12 @@
     "in": 100000,
     "out": 0,
     "desc": "Hj. Imas Hasanah Manaqib Al-Maslul"
+  },
+  {
+    "date": "2026-02-10",
+    "in": 50000,
+    "out": 0,
+    "desc": "Dari Kencleng untuk (Marbot)"
   },
   {
     "date": "2026-02-13",
