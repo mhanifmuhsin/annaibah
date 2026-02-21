@@ -644,5 +644,17 @@
     "in": 100000,
     "out": 0,
     "desc": "Hj. Iis Mintarsih (Guru Ngaji)"
+  },
+  {
+    "date": "2026-02-20",
+    "in": 200000,
+    "out": 0,
+    "desc": "Hj. Noneng Sumiaty (tambahan untuk Manaqib Pak Bambang) "
+  },
+  {
+    "date": "2026-02-20",
+    "in": 0,
+    "out": 250000,
+    "desc": "Manaqib Pak Bambang"
   }
 ]
