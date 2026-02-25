@@ -280,5 +280,17 @@
     "in": 0,
     "out": 100000,
     "desc": "Manaqib Pak Bambang"
+  },
+  {
+    "date": "2026-02-25",
+    "in": 690000,
+    "out": 0,
+    "desc": "Dari Kencleng"
+  },
+  {
+    "date": "2026-02-25",
+    "in": 0,
+    "out": 430000,
+    "desc": "Pembangunan Madrasah"
   }
 ]
