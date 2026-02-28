@@ -648,5 +648,11 @@
     "in": 36000,
     "out": 0,
     "desc": "USAMA Pak Wawan"
+  },
+  {
+    "date": "2026-02-20",
+    "in": 0,
+    "out": 710000,
+    "desc": "USAMA Bulan Februari 2026"
   }
 ]
