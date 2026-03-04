@@ -668,5 +668,17 @@
     "in": 0,
     "out": 30000,
     "desc": "Ceu Ati"
+  },
+  {
+    "date": "2026-03-05",
+    "in": 100000,
+    "out": 0,
+    "desc": "Hj. Noneng Sumiaty (Manaqib Pak Bambang) + Al-Maslul"
+  },
+  {
+    "date": "2026-03-05",
+    "in": 50000,
+    "out": 0,
+    "desc": "Hj. Noneng Sumiaty (Marbot)"
   }
 ]

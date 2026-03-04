@@ -346,5 +346,23 @@
     "in": 0,
     "out": 870000,
     "desc": "Manaqib"
+  },
+  {
+    "date": "2026-03-05",
+    "in": 250000,
+    "out": 0,
+    "desc": "Muhamad Hanif Muhsin"
+  },
+  {
+    "date": "2026-03-05",
+    "in": 80000,
+    "out": 0,
+    "desc": "Ahmad Faishal"
+  },
+  {
+    "date": "2026-03-05",
+    "in": 100000,
+    "out": 0,
+    "desc": "Hj. Noneng Sumiaty"
   }
 ]
