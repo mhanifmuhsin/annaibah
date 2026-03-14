@@ -728,5 +728,17 @@
     "in": 400000,
     "out": 0,
     "desc": "Kontrakan Cukur Rambut"
+  },
+  {
+    "date": "2026-03-14",
+    "in": 0,
+    "out": 300000,
+    "desc": "Guru Ngaji 6 Orang dari kontrakan cukur rambut"
+  },
+  {
+    "date": "2026-03-14",
+    "in": 0,
+    "out": 50000,
+    "desc": "Tambah Kas Renovasi dari Kontrakan cukur rambut"
   }
 ]
