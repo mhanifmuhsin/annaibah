@@ -310,5 +310,17 @@
     "in": 375000,
     "out": 0,
     "desc": "Dari Kencleng"
+  },
+  {
+    "date": "2026-03-27",
+    "in": 0,
+    "out": 180000,
+    "desc": "Air Sirraya Gelas 5 Dus"
+  },
+  {
+    "date": "2026-03-27",
+    "in": 0,
+    "out": 100000,
+    "desc": "Manaqib Pak Bambang"
   }
 ]
