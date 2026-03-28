@@ -100,5 +100,11 @@
     "in": 50000,
     "out": 0,
     "desc": "Dari Kontrakan cukur rambut"
+  },
+  {
+    "date": "2026-03-28",
+    "in": 350000,
+    "out": 0,
+    "desc": "Dari saldo ngendap Lainnya"
   }
 ]
