@@ -776,5 +776,23 @@
     "in": 0,
     "out": 350000,
     "desc": "Sisa Saldo ngendap dialihkan ke Renovasi"
+  },
+  {
+    "date": "2026-04-09",
+    "in": 50000,
+    "out": 0,
+    "desc": "Hj. Imas Hasanah (Marbot)"
+  },
+  {
+    "date": "2026-04-09",
+    "in": 30000,
+    "out": 0,
+    "desc": "Hj. Imas Hasanah (Ceu Ati)"
+  },
+  {
+    "date": "2026-04-09",
+    "in": 100000,
+    "out": 0,
+    "desc": "Hj. Imas Hasanah Manaqib Al-Maslul"
   }
 ]

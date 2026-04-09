@@ -774,5 +774,11 @@
     "in": 0,
     "out": 713000,
     "desc": "USAMA Bulan Maret 2026"
+  },
+  {
+    "date": "2026-04-09",
+    "in": 70000,
+    "out": 0,
+    "desc": "Hj. Imas Hasanah"
   }
 ]
