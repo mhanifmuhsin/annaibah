@@ -388,5 +388,17 @@
     "in": 0,
     "out": 1080000,
     "desc": "Manaqib + Tahlil"
+  },
+  {
+    "date": "2026-04-09",
+    "in": 240000,
+    "out": 0,
+    "desc": "Muhamad Hanif Muhsin"
+  },
+  {
+    "date": "2026-04-09",
+    "in": 80000,
+    "out": 0,
+    "desc": "Ahmad Faishal"
   }
 ]
