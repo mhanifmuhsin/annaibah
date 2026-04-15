@@ -824,5 +824,23 @@
     "in": 400000,
     "out": 0,
     "desc": "Kontrakan Cukur Rambut"
+  },
+  {
+    "date": "2026-04-15",
+    "in": 0,
+    "out": 39000,
+    "desc": "BPJS H.Agus Sopandi"
+  },
+  {
+    "date": "2026-04-15",
+    "in": 0,
+    "out": 111000,
+    "desc": "DKM Annaibah (H.Agus Sopandi)"
+  },
+  {
+    "date": "2026-04-15",
+    "in": 0,
+    "out": 50000,
+    "desc": "Wa Lilis dari Kontrakan cukur rambut"
   }
 ]
