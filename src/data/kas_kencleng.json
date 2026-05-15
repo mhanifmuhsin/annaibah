@@ -364,5 +364,11 @@
     "in": 0,
     "out": 120000,
     "desc": "Tabaruk Kitab Fadhoilus Shuhur Masuk Kas Annaibah"
+  },
+  {
+    "date": "2026-05-15",
+    "in": 0,
+    "out": 9000,
+    "desc": "Save to bank"
   }
 ]
