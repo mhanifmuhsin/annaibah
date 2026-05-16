@@ -118,5 +118,17 @@
     "in": 0,
     "out": 300000,
     "desc": "Penambahan Paralon Air ke Ust. Arif"
+  },
+  {
+    "date": "2026-05-15",
+    "in": 300000,
+    "out": 0,
+    "desc": "H. Dian Hernawan"
+  },
+  {
+    "date": "2026-05-15",
+    "in": 0,
+    "out": 300000,
+    "desc": "Pembelian Toren ke A wawan"
   }
 ]
