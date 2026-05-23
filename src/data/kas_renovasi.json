@@ -130,5 +130,11 @@
     "in": 0,
     "out": 300000,
     "desc": "Pembelian Toren ke A wawan"
+  },
+  {
+    "date": "2026-05-23",
+    "in": 50000,
+    "out": 0,
+    "desc": "Dari Kontrakan cukur rambut"
   }
 ]

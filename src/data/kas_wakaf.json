@@ -154,5 +154,29 @@
     "in": 0,
     "out": 65000,
     "desc": "Pembersihan Makam Keluarga April 2026"
+  },
+  {
+    "date": "2026-05-23",
+    "in": 350000,
+    "out": 0,
+    "desc": "Kontrakan Wakaf"
+  },
+  {
+    "date": "2026-05-23",
+    "in": 0,
+    "out": 20000,
+    "desc": "Teh Euis"
+  },
+  {
+    "date": "2026-05-23",
+    "in": 0,
+    "out": 50000,
+    "desc": "Ibu Rella"
+  },
+  {
+    "date": "2026-05-24",
+    "in": 0,
+    "out": 100000,
+    "desc": "Renovasi Genteng"
   }
 ]
