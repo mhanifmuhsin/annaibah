@@ -370,5 +370,17 @@
     "in": 0,
     "out": 9000,
     "desc": "Save to bank"
+  },
+  {
+    "date": "2026-04-22",
+    "in": 0,
+    "out": 138000,
+    "desc": "Air Sirraya Gelas 4 Dus"
+  },
+  {
+    "date": "2026-05-23",
+    "in": 662000,
+    "out": 0,
+    "desc": "Dari Kencleng"
   }
 ]
