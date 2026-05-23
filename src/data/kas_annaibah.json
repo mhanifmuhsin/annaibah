@@ -454,5 +454,23 @@
     "in": 300000,
     "out": 0,
     "desc": "Hj. Iis Mintarsih"
+  },
+  {
+    "date": "2026-05-23",
+    "in": 100000,
+    "out": 0,
+    "desc": "Teh Reni"
+  },
+  {
+    "date": "2026-05-23",
+    "in": 100000,
+    "out": 0,
+    "desc": "A Wawan"
+  },
+  {
+    "date": "2026-05-23",
+    "in": 0,
+    "out": 1450000,
+    "desc": "Manaqib"
   }
 ]
