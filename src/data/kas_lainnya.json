@@ -957,5 +957,17 @@
     "in": 0,
     "out": 50000,
     "desc": "Tambah Kas Renovasi dari Kontrakan cukur rambut"
+  },
+  {
+    "date": "2026-05-27",
+    "in": 0,
+    "out": 39000,
+    "desc": "BPJS H.Agus Sopandi"
+  },
+  {
+    "date": "2026-05-27",
+    "in": 0,
+    "out": 111000,
+    "desc": "DKM Annaibah (H.Agus Sopandi)"
   }
 ]
