@@ -975,5 +975,11 @@
     "in": 0,
     "out": 50000,
     "desc": "Manaqib Pak Bambang"
+  },
+  {
+    "date": "2026-06-08",
+    "in": 50000,
+    "out": 0,
+    "desc": "Muhamad Hanif Muhsin (Marbot)"
   }
 ]
