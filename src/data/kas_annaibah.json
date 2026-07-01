@@ -514,5 +514,11 @@
     "in": 0,
     "out": 755000,
     "desc": "Manaqib"
+  },
+  {
+    "date": "2026-07-01",
+    "in": 240000,
+    "out": 0,
+    "desc": "Muhamad Hanif Muhsin"
   }
 ]

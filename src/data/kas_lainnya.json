@@ -1077,5 +1077,11 @@
     "in": 0,
     "out": 100000,
     "desc": "Infaq Guru Ngaji dari Hj. Iis Mintarsih"
+  },
+  {
+    "date": "2026-07-01",
+    "in": 50000,
+    "out": 0,
+    "desc": "Muhamad Hanif Muhsin (Marbot)"
   }
 ]
