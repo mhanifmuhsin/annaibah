@@ -454,5 +454,11 @@
     "in": 0,
     "out": 50000,
     "desc": "Duplikat Kunci Gerbang Madrosah 4 pcs"
+  },
+  {
+    "date": "2026-07-23",
+    "in": 350000,
+    "out": 0,
+    "desc": "Kencleng"
   }
 ]
