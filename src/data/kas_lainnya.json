@@ -1179,5 +1179,17 @@
     "in": 0,
     "out": 50000,
     "desc": "Wa Lilis dari Kontrakan cukur rambut"
+  },
+  {
+    "date": "2026-08-08",
+    "in": 100000,
+    "out": 0,
+    "desc": "Hj. Noneng Sumiaty (Manaqib Pak Bambang) + Al-Maslul"
+  },
+  {
+    "date": "2026-08-08",
+    "in": 50000,
+    "out": 0,
+    "desc": "Hj. Noneng Sumiaty (Marbot)"
   }
 ]
