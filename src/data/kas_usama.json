@@ -1254,5 +1254,17 @@
     "in": 0,
     "out": 731000,
     "desc": "USAMA Bulan Juli 2026"
+  },
+  {
+    "date": "2026-08-08",
+    "in": 38000,
+    "out": 0,
+    "desc": "Muhamad Hanif Muhsin"
+  },
+  {
+    "date": "2026-08-08",
+    "in": 19000,
+    "out": 0,
+    "desc": "Rikma Parlina"
   }
 ]
