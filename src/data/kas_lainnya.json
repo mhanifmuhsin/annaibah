@@ -1221,5 +1221,23 @@
     "in": 0,
     "out": 30000,
     "desc": "Hj. Imas Hasanah (Ceu Ati)"
+  },
+  {
+    "date": "2026-08-24",
+    "in": 100000,
+    "out": 0,
+    "desc": "Hj. Iis Mintarsih (Guru Ngaji)"
+  },
+  {
+    "date": "2026-08-24",
+    "in": 0,
+    "out": 39000,
+    "desc": "BPJS H.Agus Sopandi"
+  },
+  {
+    "date": "2026-08-24",
+    "in": 0,
+    "out": 61000,
+    "desc": "DKM Annaibah (H.Agus Sopandi)"
   }
 ]
