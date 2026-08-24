@@ -478,5 +478,17 @@
     "in": 0,
     "out": 100000,
     "desc": "DKM Annaibah (Ust. Arif) - Juli"
+  },
+  {
+    "date": "2026-08-23",
+    "in": 0,
+    "out": 125000,
+    "desc": "Air Sirraya Gelas 6 Dus"
+  },
+  {
+    "date": "2026-08-24",
+    "in": 557000,
+    "out": 0,
+    "desc": "Kencleng"
   }
 ]
