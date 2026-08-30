@@ -1374,5 +1374,11 @@
     "in": 0,
     "out": 693000,
     "desc": "USAMA Bulan Agustus 2026"
+  },
+  {
+    "date": "2026-09-01",
+    "in": 50000,
+    "out": 0,
+    "desc": "H. Agus Sopandi"
   }
 ]
