@@ -20,15 +20,15 @@ const spendItems = [
     icon: <Construction className="h-4 w-4 text-gray-600" />,
     title: "Pembersihan Makam Keluarga",
     subtitle: "Teh Euis",
-    amount: "Rp 50.000.00",
+    amount: "Rp 50.000",
     date: "Per Bulan",
   },
   {
     icon: <GlassWaterIcon className="h-4 w-4 text-gray-600" />,
     title: "Sirraya Manaqib An-Naibah + At-Taqwa + Ibu Rella",
-    subtitle: "4 Dus Gelas",
-    amount: "Rp 150.000,00",
-    date: "37.500,00/Dus",
+    subtitle: "6 Dus Gelas",
+    amount: "Rp 125.000",
+    date: "Per Bulan",
   },
 ];
 
@@ -54,22 +54,22 @@ function App() {
   const [visible, setVisible] = React.useState(false);
 
   const [selectedMonth, setSelectedMonth] = React.useState(
-    new Date().getMonth()
+    new Date().getMonth(),
   );
   const [selectedYear, setSelectedYear] = React.useState(
-    new Date().getFullYear()
+    new Date().getFullYear(),
   );
   const [searchDesc, setSearchDesc] = React.useState("");
 
   // Helper: search by description
   function searchByDesc<T extends { desc?: string }>(
     data: T[],
-    query: string
+    query: string,
   ): T[] {
     if (!query) return data;
     return data.filter(
       (item) =>
-        item.desc && item.desc.toLowerCase().includes(query.toLowerCase())
+        item.desc && item.desc.toLowerCase().includes(query.toLowerCase()),
     );
   }
   const categories = [
@@ -80,7 +80,7 @@ function App() {
         const filtered = dataKasAnnaibah.filter(
           (item) =>
             new Date(item.date).getMonth() === selectedMonth &&
-            new Date(item.date).getFullYear() === selectedYear
+            new Date(item.date).getFullYear() === selectedYear,
         );
         return filtered.length
           ? filtered[filtered.length - 1].saldo.toLocaleString("id-ID", {
@@ -98,7 +98,7 @@ function App() {
         const filtered = dataKasKencleng.filter(
           (item) =>
             new Date(item.date).getMonth() === selectedMonth &&
-            new Date(item.date).getFullYear() === selectedYear
+            new Date(item.date).getFullYear() === selectedYear,
         );
         return filtered.length
           ? filtered[filtered.length - 1].saldo.toLocaleString("id-ID", {
@@ -117,7 +117,7 @@ function App() {
         const filtered = dataKasAttaqwa.filter(
           (item) =>
             new Date(item.date).getMonth() === selectedMonth &&
-            new Date(item.date).getFullYear() === selectedYear
+            new Date(item.date).getFullYear() === selectedYear,
         );
         return filtered.length
           ? filtered[filtered.length - 1].saldo.toLocaleString("id-ID", {
@@ -135,7 +135,7 @@ function App() {
         const filtered = dataKasUsama.filter(
           (item) =>
             new Date(item.date).getMonth() === selectedMonth &&
-            new Date(item.date).getFullYear() === selectedYear
+            new Date(item.date).getFullYear() === selectedYear,
         );
         return filtered.length
           ? filtered[filtered.length - 1].saldo.toLocaleString("id-ID", {
@@ -153,7 +153,7 @@ function App() {
         const filtered = dataKasRenovasi.filter(
           (item) =>
             new Date(item.date).getMonth() === selectedMonth &&
-            new Date(item.date).getFullYear() === selectedYear
+            new Date(item.date).getFullYear() === selectedYear,
         );
         return filtered.length
           ? filtered[filtered.length - 1].saldo.toLocaleString("id-ID", {
@@ -171,7 +171,7 @@ function App() {
         const filtered = dataKasWakaf.filter(
           (item) =>
             new Date(item.date).getMonth() === selectedMonth &&
-            new Date(item.date).getFullYear() === selectedYear
+            new Date(item.date).getFullYear() === selectedYear,
         );
         return filtered.length
           ? filtered[filtered.length - 1].saldo.toLocaleString("id-ID", {
@@ -189,7 +189,7 @@ function App() {
         const filtered = dataKasLainnya.filter(
           (item) =>
             new Date(item.date).getMonth() === selectedMonth &&
-            new Date(item.date).getFullYear() === selectedYear
+            new Date(item.date).getFullYear() === selectedYear,
         );
         return filtered.length
           ? filtered[filtered.length - 1].saldo.toLocaleString("id-ID", {
@@ -294,56 +294,56 @@ function App() {
                       {
                         month: "long",
                         year: "numeric",
-                      }
+                      },
                     )}
                     total={(
                       dataKasAnnaibah
                         .filter(
                           (item) =>
                             new Date(item.date).getMonth() === selectedMonth &&
-                            new Date(item.date).getFullYear() === selectedYear
+                            new Date(item.date).getFullYear() === selectedYear,
                         )
                         .reduce((acc, item) => acc + item.in, 0) +
                       dataKasKencleng
                         .filter(
                           (item) =>
                             new Date(item.date).getMonth() === selectedMonth &&
-                            new Date(item.date).getFullYear() === selectedYear
+                            new Date(item.date).getFullYear() === selectedYear,
                         )
                         .reduce((acc, item) => acc + item.in, 0) +
                       dataKasLainnya
                         .filter(
                           (item) =>
                             new Date(item.date).getMonth() === selectedMonth &&
-                            new Date(item.date).getFullYear() === selectedYear
+                            new Date(item.date).getFullYear() === selectedYear,
                         )
                         .reduce((acc, item) => acc + item.in, 0) +
                       dataKasAttaqwa
                         .filter(
                           (item) =>
                             new Date(item.date).getMonth() === selectedMonth &&
-                            new Date(item.date).getFullYear() === selectedYear
+                            new Date(item.date).getFullYear() === selectedYear,
                         )
                         .reduce((acc, item) => acc + item.in, 0) +
                       dataKasUsama
                         .filter(
                           (item) =>
                             new Date(item.date).getMonth() === selectedMonth &&
-                            new Date(item.date).getFullYear() === selectedYear
+                            new Date(item.date).getFullYear() === selectedYear,
                         )
                         .reduce((acc, item) => acc + item.in, 0) +
                       dataKasRenovasi
                         .filter(
                           (item) =>
                             new Date(item.date).getMonth() === selectedMonth &&
-                            new Date(item.date).getFullYear() === selectedYear
+                            new Date(item.date).getFullYear() === selectedYear,
                         )
                         .reduce((acc, item) => acc + item.in, 0) +
                       dataKasWakaf
                         .filter(
                           (item) =>
                             new Date(item.date).getMonth() === selectedMonth &&
-                            new Date(item.date).getFullYear() === selectedYear
+                            new Date(item.date).getFullYear() === selectedYear,
                         )
                         .reduce((acc, item) => acc + item.in, 0)
                     ).toLocaleString("id-ID", {
@@ -355,49 +355,49 @@ function App() {
                         .filter(
                           (item) =>
                             new Date(item.date).getMonth() === selectedMonth &&
-                            new Date(item.date).getFullYear() === selectedYear
+                            new Date(item.date).getFullYear() === selectedYear,
                         )
                         .reduce((acc, item) => acc + item.out, 0) +
                       dataKasKencleng
                         .filter(
                           (item) =>
                             new Date(item.date).getMonth() === selectedMonth &&
-                            new Date(item.date).getFullYear() === selectedYear
+                            new Date(item.date).getFullYear() === selectedYear,
                         )
                         .reduce((acc, item) => acc + item.out, 0) +
                       dataKasLainnya
                         .filter(
                           (item) =>
                             new Date(item.date).getMonth() === selectedMonth &&
-                            new Date(item.date).getFullYear() === selectedYear
+                            new Date(item.date).getFullYear() === selectedYear,
                         )
                         .reduce((acc, item) => acc + item.out, 0) +
                       dataKasAttaqwa
                         .filter(
                           (item) =>
                             new Date(item.date).getMonth() === selectedMonth &&
-                            new Date(item.date).getFullYear() === selectedYear
+                            new Date(item.date).getFullYear() === selectedYear,
                         )
                         .reduce((acc, item) => acc + item.out, 0) +
                       dataKasRenovasi
                         .filter(
                           (item) =>
                             new Date(item.date).getMonth() === selectedMonth &&
-                            new Date(item.date).getFullYear() === selectedYear
+                            new Date(item.date).getFullYear() === selectedYear,
                         )
                         .reduce((acc, item) => acc + item.out, 0) +
                       dataKasWakaf
                         .filter(
                           (item) =>
                             new Date(item.date).getMonth() === selectedMonth &&
-                            new Date(item.date).getFullYear() === selectedYear
+                            new Date(item.date).getFullYear() === selectedYear,
                         )
                         .reduce((acc, item) => acc + item.out, 0) +
                       dataKasUsama
                         .filter(
                           (item) =>
                             new Date(item.date).getMonth() === selectedMonth &&
-                            new Date(item.date).getFullYear() === selectedYear
+                            new Date(item.date).getFullYear() === selectedYear,
                         )
                         .reduce((acc, item) => acc + item.out, 0)
                     ).toLocaleString("id-ID", {
@@ -417,7 +417,7 @@ function App() {
                 <section className="m-2">
                   <ProgramCard
                     title="Program Pembiasaan"
-                    period="2025"
+                    period="2026"
                     items={spendItems}
                   />
                 </section>
@@ -433,13 +433,13 @@ function App() {
                       {
                         month: "long",
                         year: "numeric",
-                      }
+                      },
                     )}
                     total={dataKasAnnaibah
                       .filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
-                          new Date(item.date).getFullYear() === selectedYear
+                          new Date(item.date).getFullYear() === selectedYear,
                       )
                       .reduce((acc, item) => acc + item.in, 0)
                       .toLocaleString("id-ID", {
@@ -450,7 +450,7 @@ function App() {
                       .filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
-                          new Date(item.date).getFullYear() === selectedYear
+                          new Date(item.date).getFullYear() === selectedYear,
                       )
                       .reduce((acc, item) => acc + item.out, 0)
                       .toLocaleString("id-ID", {
@@ -458,7 +458,7 @@ function App() {
                         currency: "IDR",
                       })}
                     categories={categories.filter(
-                      (cat) => cat.id === "kas_annaibah"
+                      (cat) => cat.id === "kas_annaibah",
                     )}
                   />
                 </section>
@@ -472,9 +472,9 @@ function App() {
                       dataKasAnnaibah.filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
-                          new Date(item.date).getFullYear() === selectedYear
+                          new Date(item.date).getFullYear() === selectedYear,
                       ),
-                      searchDesc
+                      searchDesc,
                     )}
                   />
                 </section>
@@ -491,13 +491,13 @@ function App() {
                       {
                         month: "long",
                         year: "numeric",
-                      }
+                      },
                     )}
                     total={dataKasKencleng
                       .filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
-                          new Date(item.date).getFullYear() === selectedYear
+                          new Date(item.date).getFullYear() === selectedYear,
                       )
                       .reduce((acc, item) => acc + item.in, 0)
                       .toLocaleString("id-ID", {
@@ -508,7 +508,7 @@ function App() {
                       .filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
-                          new Date(item.date).getFullYear() === selectedYear
+                          new Date(item.date).getFullYear() === selectedYear,
                       )
                       .reduce((acc, item) => acc + item.out, 0)
                       .toLocaleString("id-ID", {
@@ -516,7 +516,7 @@ function App() {
                         currency: "IDR",
                       })}
                     categories={categories.filter(
-                      (cat) => cat.id === "kencleng_annaibah"
+                      (cat) => cat.id === "kencleng_annaibah",
                     )}
                   />
                 </section>
@@ -530,9 +530,9 @@ function App() {
                       dataKasKencleng.filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
-                          new Date(item.date).getFullYear() === selectedYear
+                          new Date(item.date).getFullYear() === selectedYear,
                       ),
-                      searchDesc
+                      searchDesc,
                     )}
                   />
                 </section>
@@ -549,13 +549,13 @@ function App() {
                       {
                         month: "long",
                         year: "numeric",
-                      }
+                      },
                     )}
                     total={dataKasLainnya
                       .filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
-                          new Date(item.date).getFullYear() === selectedYear
+                          new Date(item.date).getFullYear() === selectedYear,
                       )
                       .reduce((acc, item) => acc + item.in, 0)
                       .toLocaleString("id-ID", {
@@ -566,7 +566,7 @@ function App() {
                       .filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
-                          new Date(item.date).getFullYear() === selectedYear
+                          new Date(item.date).getFullYear() === selectedYear,
                       )
                       .reduce((acc, item) => acc + item.out, 0)
                       .toLocaleString("id-ID", {
@@ -574,7 +574,7 @@ function App() {
                         currency: "IDR",
                       })}
                     categories={categories.filter(
-                      (cat) => cat.id === "wakaf_annaibah"
+                      (cat) => cat.id === "wakaf_annaibah",
                     )}
                   />
                 </section>
@@ -588,9 +588,9 @@ function App() {
                       dataKasLainnya.filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
-                          new Date(item.date).getFullYear() === selectedYear
+                          new Date(item.date).getFullYear() === selectedYear,
                       ),
-                      searchDesc
+                      searchDesc,
                     )}
                   />
                 </section>
@@ -607,13 +607,13 @@ function App() {
                       {
                         month: "long",
                         year: "numeric",
-                      }
+                      },
                     )}
                     total={dataKasAttaqwa
                       .filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
-                          new Date(item.date).getFullYear() === selectedYear
+                          new Date(item.date).getFullYear() === selectedYear,
                       )
                       .reduce((acc, item) => acc + item.in, 0)
                       .toLocaleString("id-ID", {
@@ -624,7 +624,7 @@ function App() {
                       .filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
-                          new Date(item.date).getFullYear() === selectedYear
+                          new Date(item.date).getFullYear() === selectedYear,
                       )
                       .reduce((acc, item) => acc + item.out, 0)
                       .toLocaleString("id-ID", {
@@ -632,7 +632,7 @@ function App() {
                         currency: "IDR",
                       })}
                     categories={categories.filter(
-                      (cat) => cat.id === "at_taqwa"
+                      (cat) => cat.id === "at_taqwa",
                     )}
                   />
                 </section>
@@ -646,9 +646,9 @@ function App() {
                       dataKasAttaqwa.filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
-                          new Date(item.date).getFullYear() === selectedYear
+                          new Date(item.date).getFullYear() === selectedYear,
                       ),
-                      searchDesc
+                      searchDesc,
                     )}
                   />
                 </section>
@@ -665,13 +665,13 @@ function App() {
                       {
                         month: "long",
                         year: "numeric",
-                      }
+                      },
                     )}
                     total={dataKasUsama
                       .filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
-                          new Date(item.date).getFullYear() === selectedYear
+                          new Date(item.date).getFullYear() === selectedYear,
                       )
                       .reduce((acc, item) => acc + item.in, 0)
                       .toLocaleString("id-ID", {
@@ -682,7 +682,7 @@ function App() {
                       .filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
-                          new Date(item.date).getFullYear() === selectedYear
+                          new Date(item.date).getFullYear() === selectedYear,
                       )
                       .reduce((acc, item) => acc + item.out, 0)
                       .toLocaleString("id-ID", {
@@ -702,9 +702,9 @@ function App() {
                       dataKasUsama.filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
-                          new Date(item.date).getFullYear() === selectedYear
+                          new Date(item.date).getFullYear() === selectedYear,
                       ),
-                      searchDesc
+                      searchDesc,
                     )}
                   />
                 </section>
@@ -721,13 +721,13 @@ function App() {
                       {
                         month: "long",
                         year: "numeric",
-                      }
+                      },
                     )}
                     total={dataKasRenovasi
                       .filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
-                          new Date(item.date).getFullYear() === selectedYear
+                          new Date(item.date).getFullYear() === selectedYear,
                       )
                       .reduce((acc, item) => acc + item.in, 0)
                       .toLocaleString("id-ID", {
@@ -738,7 +738,7 @@ function App() {
                       .filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
-                          new Date(item.date).getFullYear() === selectedYear
+                          new Date(item.date).getFullYear() === selectedYear,
                       )
                       .reduce((acc, item) => acc + item.out, 0)
                       .toLocaleString("id-ID", {
@@ -746,7 +746,7 @@ function App() {
                         currency: "IDR",
                       })}
                     categories={categories.filter(
-                      (cat) => cat.id === "renovasi"
+                      (cat) => cat.id === "renovasi",
                     )}
                   />
                 </section>
@@ -760,9 +760,9 @@ function App() {
                       dataKasRenovasi.filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
-                          new Date(item.date).getFullYear() === selectedYear
+                          new Date(item.date).getFullYear() === selectedYear,
                       ),
-                      searchDesc
+                      searchDesc,
                     )}
                   />
                 </section>
@@ -779,13 +779,13 @@ function App() {
                       {
                         month: "long",
                         year: "numeric",
-                      }
+                      },
                     )}
                     total={dataKasWakaf
                       .filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
-                          new Date(item.date).getFullYear() === selectedYear
+                          new Date(item.date).getFullYear() === selectedYear,
                       )
                       .reduce((acc, item) => acc + item.in, 0)
                       .toLocaleString("id-ID", {
@@ -796,7 +796,7 @@ function App() {
                       .filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
-                          new Date(item.date).getFullYear() === selectedYear
+                          new Date(item.date).getFullYear() === selectedYear,
                       )
                       .reduce((acc, item) => acc + item.out, 0)
                       .toLocaleString("id-ID", {
@@ -816,9 +816,9 @@ function App() {
                       dataKasWakaf.filter(
                         (item) =>
                           new Date(item.date).getMonth() === selectedMonth &&
-                          new Date(item.date).getFullYear() === selectedYear
+                          new Date(item.date).getFullYear() === selectedYear,
                       ),
-                      searchDesc
+                      searchDesc,
                     )}
                   />
                 </section>
