@@ -604,5 +604,11 @@
     "in": 0,
     "out": 850000,
     "desc": "Manaqib"
+  },
+  {
+    "date": "2026-09-02",
+    "in": 80000,
+    "out": 0,
+    "desc": "Ahmad Faishal"
   }
 ]
