@@ -1275,5 +1275,23 @@
     "in": 0,
     "out": 100000,
     "desc": "Hj. Iis Mintarsih (Guru Ngaji)"
+  },
+  {
+    "date": "2026-09-06",
+    "in": 50000,
+    "out": 0,
+    "desc": "Hj. Imas Hasanah (Marbot)"
+  },
+  {
+    "date": "2026-09-06",
+    "in": 30000,
+    "out": 0,
+    "desc": "Hj. Imas Hasanah (Ceu Ati)"
+  },
+  {
+    "date": "2026-09-06",
+    "in": 100000,
+    "out": 0,
+    "desc": "Hj. Imas Hasanah Manaqib Al-Maslul"
   }
 ]
