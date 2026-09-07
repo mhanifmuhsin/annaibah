@@ -261,7 +261,7 @@ function App() {
                 value={selectedYear}
                 onChange={(e) => setSelectedYear(Number(e.target.value))}
               >
-                {Array.from({ length: 5 }).map((_, i) => {
+                {Array.from({ length: 2 }).map((_, i) => {
                   const year = new Date().getFullYear() - i;
                   return (
                     <option key={year} value={year}>
