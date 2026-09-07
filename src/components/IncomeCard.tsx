@@ -1,3 +1,4 @@
+import { Clock } from "lucide-react";
 import React from "react";
 import banner from "../assets/ban.webp"; // Adjust the path if needed
 
@@ -10,6 +11,7 @@ interface Category {
 interface IncomeCardProps {
   title: string;
   date: string;
+  lastUpdated?: string;
   total: string;
   totalExpense?: string;
   categories: Category[];
@@ -18,6 +20,7 @@ interface IncomeCardProps {
 const IncomeCard: React.FC<IncomeCardProps> = ({
   title,
   date,
+  lastUpdated,
   total,
   totalExpense,
   categories,
@@ -72,6 +75,13 @@ const IncomeCard: React.FC<IncomeCardProps> = ({
           </div>
         ))}
       </div>
+
+      {lastUpdated && (
+        <p className="mt-4 flex items-center gap-1 text-[11px] text-gray-500">
+          <Clock className="h-3 w-3" />
+          Terakhir diupdate: {lastUpdated}
+        </p>
+      )}
     </div>
   );
 };

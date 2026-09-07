@@ -13,7 +13,7 @@ import kasLainnyaData from "./data/kas_lainnya.json";
 import kasRenovasi from "./data/kas_renovasi.json";
 import kasUsama from "./data/kas_usama.json";
 import kasWakaf from "./data/kas_wakaf.json";
-import { hitungSaldo } from "./utils";
+import { formatLastUpdated, getLatestDateString, hitungSaldo } from "./utils";
 
 const spendItems = [
   {
@@ -51,6 +51,38 @@ function App() {
   const dataKasUsama = hitungSaldo(kasUsama);
   const dataKasRenovasi = hitungSaldo(kasRenovasi);
   const dataKasWakaf = hitungSaldo(kasWakaf);
+  const lastUpdatedAll = formatLastUpdated(
+    getLatestDateString([
+      dataKasAnnaibah,
+      dataKasKencleng,
+      dataKasLainnya,
+      dataKasAttaqwa,
+      dataKasUsama,
+      dataKasRenovasi,
+      dataKasWakaf,
+    ]),
+  );
+  const lastUpdatedAnnaibah = formatLastUpdated(
+    getLatestDateString([dataKasAnnaibah]),
+  );
+  const lastUpdatedKencleng = formatLastUpdated(
+    getLatestDateString([dataKasKencleng]),
+  );
+  const lastUpdatedLainnya = formatLastUpdated(
+    getLatestDateString([dataKasLainnya]),
+  );
+  const lastUpdatedAttaqwa = formatLastUpdated(
+    getLatestDateString([dataKasAttaqwa]),
+  );
+  const lastUpdatedUsama = formatLastUpdated(
+    getLatestDateString([dataKasUsama]),
+  );
+  const lastUpdatedRenovasi = formatLastUpdated(
+    getLatestDateString([dataKasRenovasi]),
+  );
+  const lastUpdatedWakaf = formatLastUpdated(
+    getLatestDateString([dataKasWakaf]),
+  );
   const [visible, setVisible] = React.useState(false);
 
   const [selectedMonth, setSelectedMonth] = React.useState(
@@ -296,6 +328,7 @@ function App() {
                         year: "numeric",
                       },
                     )}
+                    lastUpdated={lastUpdatedAll}
                     total={(
                       dataKasAnnaibah
                         .filter(
@@ -435,6 +468,7 @@ function App() {
                         year: "numeric",
                       },
                     )}
+                    lastUpdated={lastUpdatedAnnaibah}
                     total={dataKasAnnaibah
                       .filter(
                         (item) =>
@@ -493,6 +527,7 @@ function App() {
                         year: "numeric",
                       },
                     )}
+                    lastUpdated={lastUpdatedKencleng}
                     total={dataKasKencleng
                       .filter(
                         (item) =>
@@ -551,6 +586,7 @@ function App() {
                         year: "numeric",
                       },
                     )}
+                    lastUpdated={lastUpdatedLainnya}
                     total={dataKasLainnya
                       .filter(
                         (item) =>
@@ -609,6 +645,7 @@ function App() {
                         year: "numeric",
                       },
                     )}
+                    lastUpdated={lastUpdatedAttaqwa}
                     total={dataKasAttaqwa
                       .filter(
                         (item) =>
@@ -667,6 +704,7 @@ function App() {
                         year: "numeric",
                       },
                     )}
+                    lastUpdated={lastUpdatedUsama}
                     total={dataKasUsama
                       .filter(
                         (item) =>
@@ -723,6 +761,7 @@ function App() {
                         year: "numeric",
                       },
                     )}
+                    lastUpdated={lastUpdatedRenovasi}
                     total={dataKasRenovasi
                       .filter(
                         (item) =>
@@ -781,6 +820,7 @@ function App() {
                         year: "numeric",
                       },
                     )}
+                    lastUpdated={lastUpdatedWakaf}
                     total={dataKasWakaf
                       .filter(
                         (item) =>

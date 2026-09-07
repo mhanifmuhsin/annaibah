@@ -43,3 +43,54 @@ export function hitungSaldo(
       };
     });
 }
+
+export function getLatestDateString(
+  datasets: Array<Array<{ date: string }>>,
+): string | null {
+  let latest: { raw: string; time: number } | null = null;
+
+  for (const data of datasets) {
+    for (const item of data) {
+      const time = new Date(item.date).getTime();
+      if (Number.isNaN(time)) continue;
+      if (!latest || time > latest.time) {
+        latest = { raw: item.date, time };
+      }
+    }
+  }
+
+  return latest?.raw ?? null;
+}
+
+export function formatLastUpdated(dateStr: string | null): string {
+  if (!dateStr) return "-";
+
+  const hasTime = /T\d{2}:\d{2}| \d{2}:\d{2}/.test(dateStr);
+  const date = hasTime
+    ? new Date(dateStr)
+    : (() => {
+        const [year, month, day] = dateStr.split("-").map(Number);
+        return new Date(year, (month || 1) - 1, day || 1);
+      })();
+
+  if (Number.isNaN(date.getTime())) return "-";
+
+  return date.toLocaleString(
+    "id-ID",
+    hasTime
+      ? {
+          weekday: "long",
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+        }
+      : {
+          weekday: "long",
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+        },
+  );
+}
