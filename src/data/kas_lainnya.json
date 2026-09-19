@@ -1311,5 +1311,17 @@
     "in": 0,
     "out": 150000,
     "desc": "Manaqib Al-Maslul"
+  },
+  {
+    "date": "2026-09-15",
+    "in": 0,
+    "out": 30000,
+    "desc": "Ceu Ati"
+  },
+  {
+    "date": "2026-09-14",
+    "in": 100000,
+    "out": 0,
+    "desc": "Hj. Iis Mintarsih (Guru Ngaji)"
   }
 ]
