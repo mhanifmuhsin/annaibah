@@ -5,4 +5,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   base: "/annaibah",
+  define: {
+    __DEPLOYED_AT__: JSON.stringify(new Date().toISOString()),
+  },
 });

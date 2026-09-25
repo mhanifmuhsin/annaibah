@@ -44,24 +44,6 @@ export function hitungSaldo(
     });
 }
 
-export function getLatestDateString(
-  datasets: Array<Array<{ date: string }>>,
-): string | null {
-  let latest: { raw: string; time: number } | null = null;
-
-  for (const data of datasets) {
-    for (const item of data) {
-      const time = new Date(item.date).getTime();
-      if (Number.isNaN(time)) continue;
-      if (!latest || time > latest.time) {
-        latest = { raw: item.date, time };
-      }
-    }
-  }
-
-  return latest?.raw ?? null;
-}
-
 export function formatLastUpdated(dateStr: string | null): string {
   if (!dateStr) return "-";
 
@@ -75,22 +57,12 @@ export function formatLastUpdated(dateStr: string | null): string {
 
   if (Number.isNaN(date.getTime())) return "-";
 
-  return date.toLocaleString(
-    "id-ID",
-    hasTime
-      ? {
-          weekday: "long",
-          day: "numeric",
-          month: "long",
-          year: "numeric",
-          hour: "2-digit",
-          minute: "2-digit",
-        }
-      : {
-          weekday: "long",
-          day: "numeric",
-          month: "long",
-          year: "numeric",
-        },
-  );
+  return date.toLocaleString("id-ID", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
 }

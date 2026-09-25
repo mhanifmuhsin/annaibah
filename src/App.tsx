@@ -14,7 +14,7 @@ import kasRenovasi from "./data/kas_renovasi.json";
 import kasUsama from "./data/kas_usama.json";
 import kasWakaf from "./data/kas_wakaf.json";
 import { downloadLaporanPdf } from "./utils/downloadLaporanPdf";
-import { formatLastUpdated, getLatestDateString, hitungSaldo } from "./utils";
+import { formatLastUpdated, hitungSaldo } from "./utils";
 
 const spendItems = [
   {
@@ -52,38 +52,7 @@ function App() {
   const dataKasUsama = hitungSaldo(kasUsama);
   const dataKasRenovasi = hitungSaldo(kasRenovasi);
   const dataKasWakaf = hitungSaldo(kasWakaf);
-  const lastUpdatedAll = formatLastUpdated(
-    getLatestDateString([
-      dataKasAnnaibah,
-      dataKasKencleng,
-      dataKasLainnya,
-      dataKasAttaqwa,
-      dataKasUsama,
-      dataKasRenovasi,
-      dataKasWakaf,
-    ]),
-  );
-  const lastUpdatedAnnaibah = formatLastUpdated(
-    getLatestDateString([dataKasAnnaibah]),
-  );
-  const lastUpdatedKencleng = formatLastUpdated(
-    getLatestDateString([dataKasKencleng]),
-  );
-  const lastUpdatedLainnya = formatLastUpdated(
-    getLatestDateString([dataKasLainnya]),
-  );
-  const lastUpdatedAttaqwa = formatLastUpdated(
-    getLatestDateString([dataKasAttaqwa]),
-  );
-  const lastUpdatedUsama = formatLastUpdated(
-    getLatestDateString([dataKasUsama]),
-  );
-  const lastUpdatedRenovasi = formatLastUpdated(
-    getLatestDateString([dataKasRenovasi]),
-  );
-  const lastUpdatedWakaf = formatLastUpdated(
-    getLatestDateString([dataKasWakaf]),
-  );
+  const lastUpdated = formatLastUpdated(__DEPLOYED_AT__);
   const [visible, setVisible] = React.useState(false);
 
   const [selectedMonth, setSelectedMonth] = React.useState(
@@ -363,7 +332,7 @@ function App() {
                         year: "numeric",
                       },
                     )}
-                    lastUpdated={lastUpdatedAll}
+                    lastUpdated={lastUpdated}
                     total={(
                       dataKasAnnaibah
                         .filter(
@@ -503,7 +472,7 @@ function App() {
                         year: "numeric",
                       },
                     )}
-                    lastUpdated={lastUpdatedAnnaibah}
+                    lastUpdated={lastUpdated}
                     onDownload={() =>
                       downloadKasReport("Laporan Kas An-Naibah", dataKasAnnaibah)
                     }
@@ -565,7 +534,7 @@ function App() {
                         year: "numeric",
                       },
                     )}
-                    lastUpdated={lastUpdatedKencleng}
+                    lastUpdated={lastUpdated}
                     onDownload={() =>
                       downloadKasReport("Laporan Kas Kencleng", dataKasKencleng)
                     }
@@ -627,7 +596,7 @@ function App() {
                         year: "numeric",
                       },
                     )}
-                    lastUpdated={lastUpdatedLainnya}
+                    lastUpdated={lastUpdated}
                     onDownload={() =>
                       downloadKasReport("Laporan Kas Lainnya", dataKasLainnya)
                     }
@@ -689,7 +658,7 @@ function App() {
                         year: "numeric",
                       },
                     )}
-                    lastUpdated={lastUpdatedAttaqwa}
+                    lastUpdated={lastUpdated}
                     onDownload={() =>
                       downloadKasReport("At-Taqwa", dataKasAttaqwa)
                     }
@@ -751,7 +720,7 @@ function App() {
                         year: "numeric",
                       },
                     )}
-                    lastUpdated={lastUpdatedUsama}
+                    lastUpdated={lastUpdated}
                     onDownload={() => downloadKasReport("USAMA", dataKasUsama)}
                     total={dataKasUsama
                       .filter(
@@ -809,7 +778,7 @@ function App() {
                         year: "numeric",
                       },
                     )}
-                    lastUpdated={lastUpdatedRenovasi}
+                    lastUpdated={lastUpdated}
                     onDownload={() =>
                       downloadKasReport("Renovasi", dataKasRenovasi)
                     }
@@ -871,7 +840,7 @@ function App() {
                         year: "numeric",
                       },
                     )}
-                    lastUpdated={lastUpdatedWakaf}
+                    lastUpdated={lastUpdated}
                     onDownload={() => downloadKasReport("Wakaf", dataKasWakaf)}
                     total={dataKasWakaf
                       .filter(
