@@ -13,6 +13,7 @@ import kasLainnyaData from "./data/kas_lainnya.json";
 import kasRenovasi from "./data/kas_renovasi.json";
 import kasUsama from "./data/kas_usama.json";
 import kasWakaf from "./data/kas_wakaf.json";
+import { downloadLaporanPdf } from "./utils/downloadLaporanPdf";
 import { formatLastUpdated, getLatestDateString, hitungSaldo } from "./utils";
 
 const spendItems = [
@@ -92,6 +93,40 @@ function App() {
     new Date().getFullYear(),
   );
   const [searchDesc, setSearchDesc] = React.useState("");
+
+  function itemsInSelectedMonth<
+    T extends { date: string; in: number; out: number; saldo: number; desc: string },
+  >(data: T[]) {
+    return data.filter(
+      (item) =>
+        new Date(item.date).getMonth() === selectedMonth &&
+        new Date(item.date).getFullYear() === selectedYear,
+    );
+  }
+
+  function downloadKasReport(
+    title: string,
+    data: Array<{
+      date: string;
+      desc: string;
+      in: number;
+      out: number;
+      saldo: number;
+    }>,
+  ) {
+    const items = itemsInSelectedMonth(data);
+    downloadLaporanPdf({
+      title,
+      period: new Date(selectedYear, selectedMonth).toLocaleString("id-ID", {
+        month: "long",
+        year: "numeric",
+      }),
+      saldo: items.length ? items[items.length - 1].saldo : 0,
+      pendapatan: items.reduce((acc, item) => acc + item.in, 0),
+      pengeluaran: items.reduce((acc, item) => acc + item.out, 0),
+      items,
+    });
+  }
 
   // Helper: search by description
   function searchByDesc<T extends { desc?: string }>(
@@ -469,6 +504,9 @@ function App() {
                       },
                     )}
                     lastUpdated={lastUpdatedAnnaibah}
+                    onDownload={() =>
+                      downloadKasReport("Laporan Kas An-Naibah", dataKasAnnaibah)
+                    }
                     total={dataKasAnnaibah
                       .filter(
                         (item) =>
@@ -528,6 +566,9 @@ function App() {
                       },
                     )}
                     lastUpdated={lastUpdatedKencleng}
+                    onDownload={() =>
+                      downloadKasReport("Laporan Kas Kencleng", dataKasKencleng)
+                    }
                     total={dataKasKencleng
                       .filter(
                         (item) =>
@@ -587,6 +628,9 @@ function App() {
                       },
                     )}
                     lastUpdated={lastUpdatedLainnya}
+                    onDownload={() =>
+                      downloadKasReport("Laporan Kas Lainnya", dataKasLainnya)
+                    }
                     total={dataKasLainnya
                       .filter(
                         (item) =>
@@ -646,6 +690,9 @@ function App() {
                       },
                     )}
                     lastUpdated={lastUpdatedAttaqwa}
+                    onDownload={() =>
+                      downloadKasReport("At-Taqwa", dataKasAttaqwa)
+                    }
                     total={dataKasAttaqwa
                       .filter(
                         (item) =>
@@ -705,6 +752,7 @@ function App() {
                       },
                     )}
                     lastUpdated={lastUpdatedUsama}
+                    onDownload={() => downloadKasReport("USAMA", dataKasUsama)}
                     total={dataKasUsama
                       .filter(
                         (item) =>
@@ -762,6 +810,9 @@ function App() {
                       },
                     )}
                     lastUpdated={lastUpdatedRenovasi}
+                    onDownload={() =>
+                      downloadKasReport("Renovasi", dataKasRenovasi)
+                    }
                     total={dataKasRenovasi
                       .filter(
                         (item) =>
@@ -821,6 +872,7 @@ function App() {
                       },
                     )}
                     lastUpdated={lastUpdatedWakaf}
+                    onDownload={() => downloadKasReport("Wakaf", dataKasWakaf)}
                     total={dataKasWakaf
                       .filter(
                         (item) =>

@@ -1,4 +1,4 @@
-import { Clock } from "lucide-react";
+import { Clock, Download } from "lucide-react";
 import React from "react";
 import banner from "../assets/ban.webp"; // Adjust the path if needed
 
@@ -12,6 +12,7 @@ interface IncomeCardProps {
   title: string;
   date: string;
   lastUpdated?: string;
+  onDownload?: () => void;
   total: string;
   totalExpense?: string;
   categories: Category[];
@@ -21,6 +22,7 @@ const IncomeCard: React.FC<IncomeCardProps> = ({
   title,
   date,
   lastUpdated,
+  onDownload,
   total,
   totalExpense,
   categories,
@@ -81,6 +83,17 @@ const IncomeCard: React.FC<IncomeCardProps> = ({
           <Clock className="h-3 w-3" />
           Terakhir diupdate: {lastUpdated}
         </p>
+      )}
+
+      {onDownload && (
+        <button
+          type="button"
+          onClick={onDownload}
+          className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-red-700 px-3 py-2 text-xs font-medium text-white"
+        >
+          <Download className="h-3.5 w-3.5" />
+          Unduh PDF
+        </button>
       )}
     </div>
   );
