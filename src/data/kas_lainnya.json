@@ -1371,5 +1371,41 @@
     "in": 0,
     "out": 61000,
     "desc": "DKM Annaibah (H.Agus Sopandi)"
+  },
+  {
+    "date": "2026-10-11",
+    "in": 50000,
+    "out": 0,
+    "desc": "Hj. Imas Hasanah (Marbot)"
+  },
+  {
+    "date": "2026-10-11",
+    "in": 30000,
+    "out": 0,
+    "desc": "Hj. Imas Hasanah (Ceu Ati)"
+  },
+  {
+    "date": "2026-10-11",
+    "in": 100000,
+    "out": 0,
+    "desc": "Hj. Imas Hasanah Manaqib Al-Maslul"
+  },
+  {
+    "date": "2026-10-11",
+    "in": 100000,
+    "out": 0,
+    "desc": "Hj. Noneng Sumiaty (Manaqib Pak Bambang) + Al-Maslul"
+  },
+  {
+    "date": "2026-10-11",
+    "in": 50000,
+    "out": 0,
+    "desc": "Hj. Noneng Sumiaty (Marbot)"
+  },
+  {
+    "date": "2026-10-11",
+    "in": 0,
+    "out": 150000,
+    "desc": "Manaqib Al-Arif"
   }
 ]
