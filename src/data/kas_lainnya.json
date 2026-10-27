@@ -1392,7 +1392,7 @@
   },
   {
     "date": "2026-10-11",
-    "in": 100000,
+    "in": 150000,
     "out": 0,
     "desc": "Hj. Noneng Sumiaty (Manaqib Pak Bambang) + Al-Maslul"
   },
@@ -1413,5 +1413,11 @@
     "in": 0,
     "out": 30000,
     "desc": "Ceu Ati"
+  },
+  {
+    "date": "2026-10-23",
+    "in": 0,
+    "out": 100000,
+    "desc": "Manaqib Pak Bambang"
   }
 ]
