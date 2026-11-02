@@ -285,7 +285,7 @@
     "date": "2026-09-27",
     "in": 0,
     "out": 65000,
-    "desc": "Pembersihan Makam Keluarga Agustus 2026"
+    "desc": "Pembersihan Makam Keluarga September 2026"
   },
   {
     "date": "2026-10-14",
@@ -304,5 +304,11 @@
     "in": 0,
     "out": 50000,
     "desc": "Ibu Rella"
+  },
+  {
+    "date": "2026-10-31",
+    "in": 0,
+    "out": 65000,
+    "desc": "Pembersihan Makam Keluarga Oktober 2026"
   }
 ]
