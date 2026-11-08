@@ -1626,5 +1626,29 @@
     "in": 0,
     "out": 726000,
     "desc": "USAMA Bulan Oktober 2026"
+  },
+  {
+    "date": "2026-11-08",
+    "in": 38000,
+    "out": 0,
+    "desc": "Muhamad Hanif Muhsin"
+  },
+  {
+    "date": "2026-11-08",
+    "in": 19000,
+    "out": 0,
+    "desc": "Rikma Parlina"
+  },
+  {
+    "date": "2026-11-08",
+    "in": 65000,
+    "out": 0,
+    "desc": "Hj. Noneng Sumiaty "
+  },
+  {
+    "date": "2026-11-08",
+    "in": 70000,
+    "out": 0,
+    "desc": "Hj. Imas Hasanah"
   }
 ]
