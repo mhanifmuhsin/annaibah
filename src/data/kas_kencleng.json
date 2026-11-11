@@ -562,5 +562,11 @@
     "in": 610000,
     "out": 0,
     "desc": "Kencleng"
+  },
+  {
+    "date": "2026-11-11",
+    "in": 0,
+    "out": 35000,
+    "desc": "Service Mic Imam"
   }
 ]
