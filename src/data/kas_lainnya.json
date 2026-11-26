@@ -1515,5 +1515,17 @@
     "in": 0,
     "out": 30000,
     "desc": "Hj. Imas Hasanah (Ceu Ati)"
+  },
+  {
+    "date": "2026-11-26",
+    "in": 100000,
+    "out": 0,
+    "desc": "Hj. Iis Mintarsih (Guru Ngaji)"
+  },
+  {
+    "date": "2026-11-26",
+    "in": 0,
+    "out": 100000,
+    "desc": "Manaqib Pak Bambang"
   }
 ]
